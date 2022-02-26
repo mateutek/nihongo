@@ -3,6 +3,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ClassIcon from '@mui/icons-material/Class';
 import TranslateIcon from '@mui/icons-material/Translate';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import SettingsIcon from '@mui/icons-material/Settings';
 import ListItemLink from './ListItemLink';
 
 type MenuItemsProps = {};
@@ -14,6 +15,7 @@ export const MenuItems: FunctionComponent<MenuItemsProps> = () => {
             <ListItemLink to="/lessons" primary="Lessons" icon={<ClassIcon />} />
             <ListItemLink to="/grammar" primary="Grammar" icon={<TranslateIcon />} />
             <ListItemLink to="/dictionary" primary="Dictionary" icon={<MenuBookIcon />} />
+            <ListItemLink to="/settings" primary="Settings" icon={<SettingsIcon />} />
         </React.Fragment>
     );
 };

@@ -65,7 +65,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 type NavigationProps = {};
 export const Navigation: FunctionComponent<NavigationProps> = (props) => {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
     // const auth = useAuth();
     // const navigate = useNavigate();
     const toggleDrawer = () => {
