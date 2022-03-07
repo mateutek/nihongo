@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import Flashcard from '../services/flashcard';
 import db from './lowdb';
 import { DataJapanese } from './data';
@@ -18,7 +18,7 @@ export type RandomData = {
 };
 
 interface DataContextType {
-    userData: Flashcard[];
+    flashcards: Flashcard[];
     getRandom: () => RandomData;
 }
 
@@ -29,15 +29,13 @@ function isCorrect(question: Flashcard, answer: Flashcard) {
 }
 
 export function DataProvider({ children }: { children: React.ReactNode }) {
-    let [userData, setUserData] = React.useState<Flashcard[]>([]);
-
-    useEffect(() => {
-        const initialData = db.data ? db.data : [];
-        setUserData(initialData);
-    }, []);
+    let [flashcards] = useState<Flashcard[]>(() => {
+        return db.data ? db.data : [];
+    });
+    // const [questionNumber, setQuestionNumber] = useState(1);
 
     function getRandom() {
-        const randomData = _.sampleSize(userData, 4);
+        const randomData = _.sampleSize(flashcards, 4);
         const questionNumber = _.random(0, 3);
         const answers = randomData.map((selectedAnswer) => ({
             text: selectedAnswer.back,
@@ -48,7 +46,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         return { question: randomData[questionNumber], answers };
     }
 
-    let value = { userData, getRandom };
+    let value = { flashcards, getRandom };
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 }

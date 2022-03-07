@@ -4,7 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Flashcard from '../services/flashcard';
 import { Box } from '@mui/material';
-import { useSettings } from '../data/StorageProvider';
+import { useSettings } from '../data/SettingsProvider';
 
 type FlashcardProps = {
     data?: Flashcard;
@@ -38,7 +38,7 @@ export const FlashcardItem: FunctionComponent<FlashcardProps> = (props) => {
 
     useEffect(() => {
         if (data) {
-            const isKatakana = data.front.kanji == '-' || data.front.kanji == '';
+            const isKatakana = data.front.kanji === '-' || data.front.kanji === '';
             let big, small;
             if (userSettings.kanjiPriority) {
                 big = isKatakana ? data.front.kana : data.front.kanji;
@@ -53,16 +53,16 @@ export const FlashcardItem: FunctionComponent<FlashcardProps> = (props) => {
     }, [data, userSettings]);
 
     return data ? (
-        <Card sx={{ minWidth: 275 }}>
+        <Card sx={{ minWidth: 275, minHeight: 150, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <CardContent>
-                <Typography align="center" sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                <Typography align="center" variant="h6" color="text.secondary" gutterBottom>
                     {question.small}
                 </Typography>
-                <Typography align="center" variant="h5" component="div">
+                <Typography align="center" variant="h4" mb={1} component="div">
                     {question.big}
                 </Typography>
                 {userSettings.showRomaji && (
-                    <Typography align="center" sx={{ mb: 1.5 }} color="text.secondary">
+                    <Typography align="center" color="text.secondary">
                         {renderRomaji(data.front.romaji)}
                     </Typography>
                 )}

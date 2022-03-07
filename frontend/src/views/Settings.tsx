@@ -1,13 +1,12 @@
 import Grid from '@mui/material/Grid';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { useSettings } from '../data/StorageProvider';
+import { useSettings } from '../data/SettingsProvider';
 import { FormControlLabel, FormGroup, Switch } from '@mui/material';
 
 export default function Settings() {
     const { userSettings, saveSetting } = useSettings();
-
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         saveSetting({ [event.target.name]: event.target.checked });
     };

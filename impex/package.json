@@ -1,0 +1,10 @@
+{
+  "name": "impex",
+  "version": "1.0.0",
+  "main": "import.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}

@@ -22,56 +22,105 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish
 21,ノート,-,nō.to,zeszyt
 22,てちょう,手帳,te.chō,organizer
 23,めいし,名刺,me.i.shi,wizytówka
-24,カート,,kā.to,karta kredytowa
+24,カート,-,kā.to,karta kredytowa
 25,えんぴつ,鉛筆,e.n.pi.tsu,ołówek
-26,ボールペン,,bō.ru.pe.n,długopis
-27,シャープペンシル,,shā.pu.pe.n.shi.ru,ołówek mechaniczny
+26,ボールペン,-,bō.ru.pe.n,długopis
+27,シャープペンシル,-,shā.pu.pe.n.shi.ru,ołówek mechaniczny
 28,かぎ,鍵,ka.gi,klucz
 29,とけい,時計,to.ka.i,zegarek
 30,かさ,傘,ka.sa,parasol
-31,かばん,,ka.ba.n,torba
-32,テレビ,,te.re.bi,telewizja
-33,ラジオ,,ra.ji.o,radio
-34,カメラ,,ka.me.ra,aparat
-35,コンピューター,,ko.n.pyū.tā,komputer
+31,かばん,-,ka.ba.n,torba
+32,テレビ,-,te.re.bi,telewizja
+33,ラジオ,-,ra.ji.o,radio
+34,カメラ,-,ka.me.ra,aparat
+35,コンピューター,-,ko.n.pyū.tā,komputer
 36,つくえ,机,tsu.ku.e,biurko
-37,いす,,i.su,krzesło
+37,いす,-,i.su,krzesło
 38,みやげ,土産,mi.ya.ge,prezent
-39,ここ,,ko.ko,tutaj
-40,そこ,,so.ko,tam
-41,あそこ,,a.so.ko,tamto
-42,どこ,,do.ko,gdzie
-43,こちら,,ko.chi.ra,w tą stronę
-44,そちら,,so.chi.ra,tędy (blisko słuchacza)
-45,あちら,,a.chi.ra,tamtędy
-46,どちら,,do.chi.ra,którędy
+39,ここ,-,ko.ko,tutaj
+40,そこ,-,so.ko,tam
+41,あそこ,-,a.so.ko,tamto
+42,どこ,-,do.ko,gdzie
+43,こちら,-,ko.chi.ra,w tą stronę
+44,そちら,-,so.chi.ra,tędy (blisko słuchacza)
+45,あちら,-,a.chi.ra,tamtędy
+46,どちら,-,do.chi.ra,którędy
 47,きょうしつ,教室,kyō.shi.tsu,klasa
 48,しょくどう,食堂,sho.ku.dō,stołówka
 49,じむしょ,事務所,ji.mu.sho,biuro
 50,かいぎしつ,会議室,ka.i.gi.shi.tsu,sala konferencyjna
 51,うけつけ,受付,u.ke.tsu.ke,recepcja
-52,ロビー,,ro.bii,lobby
+52,ロビー,-,ro.bii,lobby
 53,へや,部屋,he.ya,pokój
-54,トイレ,,to.i.re,toaleta
+54,トイレ,-,to.i.re,toaleta
 55,かいだん,階段,ka.i.da.n,schody
-56,エラベーター,,e.re.bē.tā,winda
-57,エスカレーター,,e.su.ka.rē.tā,schody ruchome
+56,エラベーター,-,e.re.bē.tā,winda
+57,エスカレーター,-,e.su.ka.rē.tā,schody ruchome
 58,じどうはんばいき,自動販売機,ji.dō.ha.n.ba.i.ki,automat
 59,でんわ,電話,de.n.wa,rozmowa telefoniczna
 60,くに,国,ku.ni,kraj
 61,かいしゃ,会社,ka.i.sha,firma
-62,うち,,u.chi,dom
+62,うち,-,u.chi,dom
 63,くつ,靴,ku.tsu,buty
-64,ネクタイ,,ne.ku.ta.i,krawat
-65,ワイン,,wa.i.n,wino
+64,ネクタイ,-,ne.ku.ta.i,krawat
+65,ワイン,-,wa.i.n,wino
 66,うりば,売り場,u.ri.ba,dział
 67,ちか,地下,chi.ka,piwnica
 68,-かい,-階,- ka.i,n-te piętro
 69,なんがい,何階,na.n.ga.i,które piętro
 70,-えん,-円,- e.n,- yen
-71,いくら,,i.ku.ra,jak dużo
+71,いくら,-,i.ku.ra,jak dużo
 72,ひゃく,百,hya.ku,sto
 73,せん,千,se.n,tysiąc
 74,まん,万,ma.n,dziesięć tysięcy
-75,すみません。,,su.mi.ma.se.n,przepraszam
-76,どうも,,dō.mo,dziękuję
+75,すみません。,-,su.mi.ma.se.n,przepraszam
+76,どうも,-,dō.mo,dziękuję
+77,たべます,食べます,ta.be.ma.su,jeść
+78,のみます,飲みます,no.mi.ma.su,pić
+79,すいます,吸います,su.i.ma.su,palić
+80,みます,見ます,mi.ma.su,"patrzeć, oglądać"
+81,ききます,聞きます,ki.ki.ma.su,słuchać
+82,よみます,読みます,yo.mi.ma.su,czytać
+83,かきます,,ka.ki.ma.su,pisać
+84,かいます,,ka.i.ma.su,kupować
+85,とります,,to.ri.ma.su,robić (zdjęcie)
+86,します,,shi.ma.su,"robić, grać"
+87,あいます,,a.i.ma.su,spotykać
+88,ごはん,,go.ha.n,"posiłek, gotowany ryż"
+89,あさごはん,,a.sa.go.ha.n,śniadanie
+90,ひるごはん,,hi.ru.go.ha.n,"obiad, lunch"
+91,ばんごはん,,ba.n.go.ha.n,kolacja
+92,パン,,pa.n,chleb
+93,たまご,卵,ta.ma.go,jajko
+94,にく,,ni.ku,mięso
+95,すかね,,su.ka.ne,ryba
+96,やさい,,ya.sa.i,warzywo
+97,くだもの,,ku.da.mo.no,owoc
+98,みず,,mi.zu,woda
+99,おちゃ,,o.cha,zielona herbata
+100,こうちゃ,,kō.cha,czarna herbata
+101,ぎゅうにゅう,,gyu.u.nyu.u,mleko
+102,ジュイス,,ju.i.su,sok
+103,ビール,,bi.i.ru,piwo
+104,おさけ,,o.sa.ke,alkohol
+105,たばこ,,ta.ba.ko,papierosy
+106,てがみ,,te.ga.mi,list
+107,レポート,,re.po.to,raport
+108,しゃしん,,sha.shi.n,fotografia
+109,ビデオ,,bi.de.o,video
+110,みせ,,mi.se,sklep
+111,のわ,,ni.wa,ogród
+112,しゃくだい,,sha.ku.da.i,praca domowa
+113,レニス,,te.ni.su,tenis
+114,サッカー,,sa.kkā,piłka nożna
+115,おはなみ,,o.ha.na.mi,oglądanie wiśni
+116,なに,,na.ni,co
+117,いっしょに,,i.ssho.ni,razem
+118,ちょっと,,cho.tto,trochę
+119,いつも,,i.tsu.mo,"zawsze, zazwyczaj"
+120,ときどき,,to.ki.do.ki,czasem
+121,それから,,so.re.ka.ra,później
+122,いいですね,,i.i.de.su.ne,To dobrze
+123,わかりました,,wa.ka.ri.ma.shi.ta,Rozumiem
+124,なんですか,,na.n.de.su.ka,Tak?
+125,じゃ,,ja,Do zobaczenia jutro

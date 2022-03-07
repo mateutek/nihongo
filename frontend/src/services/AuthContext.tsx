@@ -1,33 +1,77 @@
 import React from 'react';
-import { fakeAuthProvider } from './authProvider';
 import { Navigate, useLocation } from 'react-router-dom';
+import { auth, db } from './firebase';
+import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
+import { addDoc, collection, getDocs, query, where } from 'firebase/firestore';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 interface AuthContextType {
     user: any;
-    signin: (user: string, callback: VoidFunction) => void;
+    loading: boolean;
+    error: any;
+    signInWithGoogle: () => Promise<void>;
+    signin: (username: string, password: string, callback: VoidFunction) => void;
     signout: (callback: VoidFunction) => void;
 }
 
 let AuthContext = React.createContext<AuthContextType>(null!);
+const googleProvider = new GoogleAuthProvider();
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-    let [user, setUser] = React.useState<any>('gaksei');
+    const [user, loading, error] = useAuthState(auth);
 
-    let signin = (newUser: string, callback: VoidFunction) => {
-        return fakeAuthProvider.signin(() => {
-            setUser(newUser);
+    const signInWithGoogle = async () => {
+        try {
+            const res = await signInWithPopup(auth, googleProvider);
+            const user = res.user;
+            const q = query(collection(db, 'users'), where('uid', '==', user.uid));
+            const docs = await getDocs(q);
+            if (docs.docs.length === 0) {
+                const cardsStorage = await addDoc(collection(db, 'cardsStorage'), {
+                    owner: user.uid,
+                    levels: {
+                        0: [],
+                        1: [],
+                        2: [],
+                        3: [],
+                        4: [],
+                        5: [],
+                    },
+                });
+                await addDoc(collection(db, 'users'), {
+                    uid: user.uid,
+                    name: user.displayName,
+                    authProvider: 'google',
+                    email: user.email,
+                    cardsStorageId: cardsStorage.id,
+                    settings: {
+                        showRomaji: false,
+                        kanjiPriority: false,
+                    },
+                });
+            }
+        } catch (err: any) {
+            console.error(err);
+            alert(err.message);
+        }
+    };
+
+    let signin = async (username: string, password: string, callback: VoidFunction) => {
+        try {
+            await signInWithEmailAndPassword(auth, username, password);
             callback();
-        });
+        } catch (err: any) {
+            console.error(err);
+            alert(err.message);
+        }
     };
 
     let signout = (callback: VoidFunction) => {
-        return fakeAuthProvider.signout(() => {
-            setUser(null);
-            callback();
-        });
+        signOut(auth);
+        callback();
     };
 
-    let value = { user, signin, signout };
+    let value = { user, signin, signout, signInWithGoogle, loading, error };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
@@ -37,9 +81,10 @@ export function useAuth() {
 }
 
 export function RequireAuth({ children }: { children: JSX.Element }) {
-    let auth = useAuth();
+    let { user } = useAuth();
     let location = useLocation();
-    if (!auth.user) {
+
+    if (!user) {
         // Redirect them to the /login page, but save the current location they were
         // trying to go to when they were redirected. This allows us to send them
         // along to that page after they login, which is a nicer user experience

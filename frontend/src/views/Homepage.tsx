@@ -1,47 +1,29 @@
-import Grid from '@mui/material/Grid';
-import React, { useEffect, useState } from 'react';
-import { FlashcardItem } from '../components/FlashcardItem';
-import { AnswersList, useData } from '../data/DataProvider';
-import Flashcard from '../services/flashcard';
-import _ from 'lodash';
-import { Answers } from '../components/Answers';
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+import { Button, Paper, Stack, Typography } from '@mui/material';
 
 export default function Homepage() {
-    const [flashcardData, setFlashcardData] = useState<Flashcard | undefined>();
-    const [answers, setAnswers] = useState<AnswersList>([]);
-
-    const data = useData();
-
-    useEffect(() => {
-        const { question, answers } = data.getRandom();
-        setAnswers(answers);
-        setFlashcardData(question);
-    }, [data]);
-
-    function pickNewQuestion() {
-        setTimeout(() => {
-            const { question, answers } = data.getRandom();
-            setAnswers(answers);
-            setFlashcardData(question);
-        }, 500);
-    }
-
-    function checkAnswer(answerIndex: number) {
-        const newAnswers = _.cloneDeep(answers);
-        const clickedAnswer = newAnswers[answerIndex];
-        clickedAnswer.clicked = true;
-        setAnswers(newAnswers);
-        if (clickedAnswer.isCorrect) {
-            pickNewQuestion();
-        }
-    }
-
     return (
-        <Grid container spacing={3} justifyContent="center" alignItems="center" direction="column">
-            <Grid item>
-                <FlashcardItem data={flashcardData} />
-            </Grid>
-            <Answers answersList={answers} onClick={checkAnswer} onSkip={pickNewQuestion} />
-        </Grid>
+        <Paper
+            sx={{
+                p: 2,
+            }}
+        >
+            <Typography component="h1" variant="h2" align="center" color="text.primary" gutterBottom>
+                Nihongo
+            </Typography>
+            <Typography variant="h5" align="center" color="text.secondary" paragraph>
+                Cobaltum, elogium, et historia.Fortis classiss ducunt ad vigil.Ubi est camerarius animalis? Est nobilis
+                accola, cesaris.Luna albus humani generis est.
+            </Typography>
+            <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
+                <Button component={RouterLink} to="/quiz-select" variant="contained">
+                    Quiz
+                </Button>
+                <Button component={RouterLink} to="/dictionary" variant="outlined">
+                    Słownik
+                </Button>
+            </Stack>
+        </Paper>
     );
 }

@@ -3,8 +3,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Typography from '@mui/material/Typography';
-import Badge from '@mui/material/Badge';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import LogoutIcon from '@mui/icons-material/Logout';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import Divider from '@mui/material/Divider';
@@ -14,6 +12,9 @@ import { styled } from '@mui/material/styles';
 import MuiAppBar from '@mui/material/AppBar';
 import MuiDrawer from '@mui/material/Drawer';
 import { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar/AppBar';
+import { useAuth } from '../services/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { Avatar } from '@mui/material';
 
 const drawerWidth: number = 240;
 
@@ -63,17 +64,49 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     },
 }));
 
+function stringToColor(string: string) {
+    let hash = 0;
+    let i;
+
+    /* eslint-disable no-bitwise */
+    for (i = 0; i < string.length; i += 1) {
+        hash = string.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    let color = '#';
+
+    for (i = 0; i < 3; i += 1) {
+        const value = (hash >> (i * 8)) & 0xff;
+        color += `00${value.toString(16)}`.substr(-2);
+    }
+    /* eslint-enable no-bitwise */
+
+    return color;
+}
+
+function stringAvatar(userName: string, photo?: string) {
+    const name = `${userName.split(' ')[0][0]}${userName.split(' ')[1][0]}`;
+    let data = photo ? { src: photo } : { children: name };
+    return {
+        sx: {
+            bgcolor: stringToColor(name),
+        },
+        ...data,
+    };
+}
+
 type NavigationProps = {};
 export const Navigation: FunctionComponent<NavigationProps> = (props) => {
     const [open, setOpen] = React.useState(false);
-    // const auth = useAuth();
-    // const navigate = useNavigate();
+    const { signout, user } = useAuth();
+
+    const navigate = useNavigate();
+
     const toggleDrawer = () => {
         setOpen(!open);
     };
-
     function doLogout() {
-        // auth.signout(() => navigate("/"));
+        signout(() => navigate('/'));
     }
 
     return (
@@ -99,11 +132,7 @@ export const Navigation: FunctionComponent<NavigationProps> = (props) => {
                     <Typography component="h1" variant="h6" color="inherit" noWrap sx={{ flexGrow: 1 }}>
                         Nihongo
                     </Typography>
-                    <IconButton color="inherit">
-                        <Badge badgeContent={4} color="secondary">
-                            <NotificationsIcon />
-                        </Badge>
-                    </IconButton>
+                    {user && <Avatar {...stringAvatar(user.displayName, user.photoURL)} />}
                     <IconButton color="inherit" onClick={doLogout}>
                         <LogoutIcon />
                     </IconButton>
