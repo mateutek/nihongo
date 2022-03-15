@@ -11,6 +11,7 @@ import Dictionary from './views/Dictionary';
 import Tools from './views/Tools';
 import Quiz from './views/Quiz';
 import { LayoutProvider } from './data/LayoutProvider';
+import Grammar from './views/Grammar';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                             <Route path="/quiz" element={<Quiz />} />
                             <Route path="/dictionary" element={<Dictionary />} />
                             <Route path="/tools" element={<Tools />} />
+                            <Route path="/grammar" element={<Grammar />} />
                             <Route path="/*" element={<Homepage />} />
                         </Route>
                         <Route path="/login" element={<LoginPage />} />

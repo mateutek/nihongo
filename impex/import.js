@@ -1,5 +1,5 @@
-const csv = require("csv-parser");
-const fs = require("fs");
+import csv from "csv-parser";
+import fs from "fs";
 
 const unflattenObject = (obj) =>
     Object.keys(obj).reduce((res, k) => {

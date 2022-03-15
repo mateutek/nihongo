@@ -78,17 +78,17 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish
 77,たべます,食べます,ta.be.ma.su,jeść
 78,のみます,飲みます,no.mi.ma.su,pić
 79,すいます,吸います,su.i.ma.su,palić
-80,みます,見ます,mi.ma.su,"patrzeć, oglądać"
+80,みます,見ます,mi.ma.su,patrzeć/ oglądać
 81,ききます,聞きます,ki.ki.ma.su,słuchać
 82,よみます,読みます,yo.mi.ma.su,czytać
 83,かきます,,ka.ki.ma.su,pisać
 84,かいます,,ka.i.ma.su,kupować
 85,とります,,to.ri.ma.su,robić (zdjęcie)
-86,します,,shi.ma.su,"robić, grać"
+86,します,,shi.ma.su,robić/ grać
 87,あいます,,a.i.ma.su,spotykać
-88,ごはん,,go.ha.n,"posiłek, gotowany ryż"
+88,ごはん,,go.ha.n,posiłek/ gotowany ryż
 89,あさごはん,,a.sa.go.ha.n,śniadanie
-90,ひるごはん,,hi.ru.go.ha.n,"obiad, lunch"
+90,ひるごはん,,hi.ru.go.ha.n,obiad/lunch
 91,ばんごはん,,ba.n.go.ha.n,kolacja
 92,パン,,pa.n,chleb
 93,たまご,卵,ta.ma.go,jajko
@@ -109,7 +109,7 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish
 108,しゃしん,,sha.shi.n,fotografia
 109,ビデオ,,bi.de.o,video
 110,みせ,,mi.se,sklep
-111,のわ,,ni.wa,ogród
+111,にわ,,ni.wa,ogród
 112,しゃくだい,,sha.ku.da.i,praca domowa
 113,レニス,,te.ni.su,tenis
 114,サッカー,,sa.kkā,piłka nożna
@@ -117,10 +117,54 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish
 116,なに,,na.ni,co
 117,いっしょに,,i.ssho.ni,razem
 118,ちょっと,,cho.tto,trochę
-119,いつも,,i.tsu.mo,"zawsze, zazwyczaj"
+119,いつも,,i.tsu.mo,zawsze / zazwyczaj
 120,ときどき,,to.ki.do.ki,czasem
 121,それから,,so.re.ka.ra,później
 122,いいですね,,i.i.de.su.ne,To dobrze
 123,わかりました,,wa.ka.ri.ma.shi.ta,Rozumiem
 124,なんですか,,na.n.de.su.ka,Tak?
 125,じゃ,,ja,Do zobaczenia jutro
+126,ハンサム,,Ha.n.sa.mu,przystojny
+127,きれい,綺麗,ki.re.i,piękny / czysty
+128,しずか,静か,shi.zu.ka,cichy
+129,にぎじゃか,賑やか,ni.gi.ja.ka,"pełen życia, gwarny"
+130,しんせつ,親切,shi.n.se.tsu,pomocny / uprzejmy
+131,ひま,暇,hi.ma,wolny (czas)
+132,げんき,元気,ge.n.ki,zdrowy / energiczny
+133,べんり,便利,be.n.ri,wygodny
+134,すてき,素敵,su.te.ki,fajnie / miło
+135,おおき,大き,o.o.ki,duży
+136,ちいさい,小さい,chi.i.sa.i,mały
+137,あたらしい,新しい,a.ta.ra.shi.i,nowy/ świeży
+138,ふるい,古い,fu.ru.i,stary (obiekt)
+139,いい(よい),良い,i.i,dobry
+140,わるい,悪い,wa.ru.i,zły
+141,あつい,暑い,a.tsu.i,gorący
+142,さむい,寒い,sa.mu.i,zimny (temperatura)
+142,つめたい,冷たい,tsu.me.ta.i.,zimy (dotyk)
+143,むずかしい,難しい,mu.zu.ka.shi.i.,trudny
+144,やさしい,易しい,ya.sa.shi.i,łatwy
+145,たかい,高い,ta.ka.i,"drogi,wysoki"
+146,やすい,安い,ja.sa.i,tani
+147,おもしろい,面白い,o.mo.shi.ro.i,interesujący
+148,おいしい,美味しい,o.i.shi.i,smaczny
+149,いそがしい,忙しい,i.zu.ga.shi.i,zajęty
+150,たのしい,楽しい,ta.no.shi.i,przyjemny
+151,しろい,白い,shi.ro.i,biały
+152,くろい,黒い,ku.ro.i,czarny
+153,あかい,赤い,a.ka.i,red
+154,あおい,青い,a.o.i,niebieeski
+155,さくら,桜,sa.ku.ra,kwiat wiśni
+156,やま,山,ya.ma,góra
+157,まち,町,ma.chi,małe miasto
+158,たべもの,食べ物,ta.be.mo.no,jedzenie
+159,ところ,所,to.ko.ro,miejsce
+160,りょう,寮,ri.yo.o,hostel/ akademik
+161,レストラン,,re.su.to.ran,restauracja
+162,せいかつ,生活,sei.ka.tsu,życie
+163,[お]しごと,[お]仕事,shi.go.to,praca/ biznes
+164,どう,如何,do.o,jak?
+165,どんな~,,do.n.na,jakiego rodzaju?
+166,とても,迚も,to.te.mo,bardzo
+167,あまり,余り,a.ma.ri,bynajmniej
+168,そして,而して,so.shi.te,i (do łączenia zdań)

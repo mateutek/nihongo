@@ -1,10 +1,12 @@
 {
-  "name": "impex",
-  "version": "1.0.0",
-  "main": "import.js",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "csv-parser": "^3.0.0"
-  }
+    "name": "impex",
+    "version": "1.0.0",
+    "main": "import.js",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
+    "dependencies": {
+        "csv-parser": "^3.0.0",
+        "firebase-admin": "^10.0.2"
+    }
 }
