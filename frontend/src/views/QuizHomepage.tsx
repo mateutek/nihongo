@@ -2,6 +2,7 @@ import Grid from '@mui/material/Grid';
 import React from 'react';
 import { Paper, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import { NumberOfQuestions } from '../components/NumberOfQuestions';
+import { questionsTotal } from '../data/data';
 
 export default function QuizHomepage() {
     const [lessons, setLessons] = React.useState(() => [1, 2]);
@@ -31,6 +32,7 @@ export default function QuizHomepage() {
                         size="small"
                         color="primary"
                         orientation="vertical"
+                        disabled
                     >
                         <ToggleButton value={1}>Lekcja 1</ToggleButton>
                         <ToggleButton value={2}>Lekcja 2</ToggleButton>
@@ -50,7 +52,7 @@ export default function QuizHomepage() {
                         flexDirection: 'column',
                     }}
                 >
-                    <NumberOfQuestions maxQuestions={250} />
+                    <NumberOfQuestions maxQuestions={questionsTotal} />
                 </Paper>
             </Grid>
         </Grid>

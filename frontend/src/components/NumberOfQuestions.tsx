@@ -1,10 +1,11 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import { ButtonGroup, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import MinusIcon from '@mui/icons-material/Remove';
 import PlusIcon from '@mui/icons-material/Add';
-import { Link as RouterLink } from 'react-router-dom';
+import { useData } from '../data/DataProvider';
+import { useSettings } from '../data/SettingsProvider';
 
 type NumberOfQuestionsProps = {
     maxQuestions: number;
@@ -15,9 +16,15 @@ const minimumQuestions = 5;
 const step = 5;
 
 export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (props) => {
+    const { userSettings } = useSettings();
+    const { pickQuestions } = useData();
     const [questions, setQuestions] = useState(() => {
-        return props.maxQuestions >= defaultQuestionsNumber ? defaultQuestionsNumber : props.maxQuestions;
+        return props.maxQuestions >= defaultQuestionsNumber ? userSettings.startingQuestions : props.maxQuestions;
     });
+
+    useEffect(() => {
+        setQuestions(userSettings.startingQuestions);
+    }, [userSettings.startingQuestions]);
 
     function subtract() {
         const newQuestions = questions - step >= minimumQuestions ? questions - step : minimumQuestions;
@@ -60,7 +67,7 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
                     {questions} pytań / {props.maxQuestions} możliwych
                 </Typography>
             </Box>
-            <Button component={RouterLink} to="/quiz" variant="contained" size="small">
+            <Button onClick={() => pickQuestions(questions)} variant="contained" size="small">
                 Trenuj
             </Button>
         </>

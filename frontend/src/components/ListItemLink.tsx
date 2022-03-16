@@ -9,15 +9,16 @@ interface ListItemLinkProps {
     icon?: React.ReactElement;
     primary: string;
     to: string;
+    secondaryMatch?: string;
 }
 
 function ListItemLink(props: ListItemLinkProps) {
-    const { icon, primary, to } = props;
+    const { icon, primary, to, secondaryMatch } = props;
     const location = useLocation();
     const [isSelected, setIsSelected] = useState(false);
     React.useEffect(() => {
-        setIsSelected(location.pathname === to);
-    }, [location, to]);
+        setIsSelected(location.pathname === to || location.pathname === secondaryMatch);
+    }, [location, to, secondaryMatch]);
 
     const renderLink = React.useMemo(
         () =>

@@ -3,29 +3,13 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Flashcard from '../services/flashcard';
-import { Box } from '@mui/material';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { Button, Tooltip } from '@mui/material';
 import { useSettings } from '../data/SettingsProvider';
+import { renderRomaji } from '../helpers/helpers';
 
 type FlashcardProps = {
     data?: Flashcard;
-};
-
-const bull = (
-    <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
-        •
-    </Box>
-);
-
-const renderRomaji = (romaji: string) => {
-    let sylabbles = romaji.split('.');
-    return sylabbles.map((syllable, index) => {
-        return (
-            <span key={`syllable-${index}`}>
-                {syllable}
-                {index >= sylabbles.length - 1 ? '' : bull}
-            </span>
-        );
-    });
 };
 
 export const FlashcardItem: FunctionComponent<FlashcardProps> = (props) => {
@@ -54,17 +38,23 @@ export const FlashcardItem: FunctionComponent<FlashcardProps> = (props) => {
 
     return data ? (
         <Card sx={{ minWidth: 275, minHeight: 150, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <CardContent>
+            <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Typography align="center" variant="h6" color="text.secondary" gutterBottom>
                     {question.small}
                 </Typography>
                 <Typography align="center" variant="h4" mb={1} component="div">
                     {question.big}
                 </Typography>
-                {userSettings.showRomaji && (
+                {userSettings.showRomaji ? (
                     <Typography align="center" color="text.secondary">
                         {renderRomaji(data.front.romaji)}
                     </Typography>
+                ) : (
+                    <Tooltip disableFocusListener title={renderRomaji(data.front.romaji)}>
+                        <Button variant="text" startIcon={<VisibilityIcon />}>
+                            romaji
+                        </Button>
+                    </Tooltip>
                 )}
             </CardContent>
         </Card>

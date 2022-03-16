@@ -14,7 +14,7 @@ export const MenuItems: FunctionComponent<MenuItemsProps> = () => {
     return (
         <React.Fragment>
             <ListItemLink to="/" primary="Dashboard" icon={<DashboardIcon />} />
-            <ListItemLink to="/quiz-select" primary="Quiz" icon={<QuizIcon />} />
+            <ListItemLink to="/quiz-select" secondaryMatch="/quiz" primary="Quiz" icon={<QuizIcon />} />
             <ListItemLink to="/lessons" primary="Lekcje" icon={<ClassIcon />} />
             <ListItemLink to="/grammar" primary="Gramatyka" icon={<TranslateIcon />} />
             <ListItemLink to="/dictionary" primary="Słownik" icon={<MenuBookIcon />} />

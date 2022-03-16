@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { supermemo, SuperMemoItem, SuperMemoGrade } from './supermemo';
-import { DataJapanese } from '../data/data';
+import { DataJapanese, SingleDataDao } from '../data/data';
 
 export type FlashcardTextPolish = {
     text: string;
@@ -11,6 +11,8 @@ export type FlashcardTextJapanese = DataJapanese;
 export type FlashcardText = FlashcardTextPolish | FlashcardTextJapanese;
 
 interface IFlashcard extends SuperMemoItem {
+    id: string;
+    question: SingleDataDao;
     front: FlashcardTextJapanese;
     back: string;
     dueDate: string;
@@ -18,6 +20,8 @@ interface IFlashcard extends SuperMemoItem {
 }
 
 class Flashcard implements IFlashcard {
+    back: string;
+    front: FlashcardTextJapanese;
     practice(grade: SuperMemoGrade): void {
         const { interval, repetition, efactor } = supermemo(this, grade);
         this.dueDate = dayjs(Date.now()).add(interval, 'day').toISOString();
@@ -27,13 +31,18 @@ class Flashcard implements IFlashcard {
     }
 
     constructor(
-        public front: FlashcardTextJapanese,
-        public back: string,
+        public question: SingleDataDao,
         public dueDate: string,
         public interval: number = 0,
         public repetition: number = 0,
         public efactor: number = 2.5,
-    ) {}
+    ) {
+        this.id = question.id;
+        this.back = question.polish;
+        this.front = question.japanese;
+    }
+
+    id: string;
 }
 
 export default Flashcard;

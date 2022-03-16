@@ -6,6 +6,7 @@ import { collection, query, updateDoc, where } from 'firebase/firestore';
 export type Settings = {
     showRomaji: boolean;
     kanjiPriority: boolean;
+    startingQuestions: number;
 };
 
 interface SettingsContextType {
@@ -16,6 +17,7 @@ interface SettingsContextType {
 const defaultSettings: Settings = {
     kanjiPriority: false,
     showRomaji: true,
+    startingQuestions: 40,
 };
 
 let SettingsContext = React.createContext<SettingsContextType>(null!);

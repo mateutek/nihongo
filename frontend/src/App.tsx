@@ -12,6 +12,7 @@ import Tools from './views/Tools';
 import Quiz from './views/Quiz';
 import { LayoutProvider } from './data/LayoutProvider';
 import Grammar from './views/Grammar';
+import QuizEnd from './views/QuizEnd';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         >
                             <Route path="/settings" element={<Settings />} />
                             <Route path="/quiz-select" element={<QuizHomepage />} />
+                            <Route path="/quiz-end" element={<QuizEnd />} />
                             <Route path="/quiz" element={<Quiz />} />
                             <Route path="/dictionary" element={<Dictionary />} />
                             <Route path="/tools" element={<Tools />} />

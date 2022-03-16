@@ -3,12 +3,16 @@ import React from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useSettings } from '../data/SettingsProvider';
-import { FormControlLabel, FormGroup, Switch } from '@mui/material';
+import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
 
 export default function Settings() {
     const { userSettings, saveSetting } = useSettings();
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         saveSetting({ [event.target.name]: event.target.checked });
+    };
+
+    const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        saveSetting({ [event.target.name]: parseInt(event.target.value) });
     };
 
     return (
@@ -29,7 +33,7 @@ export default function Settings() {
                             control={
                                 <Switch checked={userSettings.showRomaji} onChange={handleChange} name="showRomaji" />
                             }
-                            label="Show Rōmaji"
+                            label="Pokaż Rōmaji"
                         />
                         <FormControlLabel
                             control={
@@ -39,7 +43,24 @@ export default function Settings() {
                                     name="kanjiPriority"
                                 />
                             }
-                            label="Kanji as default text"
+                            label="Kanji jako domyślny tekst"
+                        />
+                        <TextField
+                            sx={{ marginTop: 1 }}
+                            id="filled-number"
+                            label="Domyślna ilość pytań"
+                            name="startingQuestions"
+                            onChange={handleNumberChange}
+                            inputProps={{
+                                min: 5,
+                                step: 5,
+                            }}
+                            value={userSettings.startingQuestions}
+                            type="number"
+                            variant="standard"
+                            InputLabelProps={{
+                                shrink: true,
+                            }}
                         />
                     </FormGroup>
                 </Paper>

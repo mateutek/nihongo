@@ -47,6 +47,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
                     settings: {
                         showRomaji: false,
                         kanjiPriority: false,
+                        startingQuestions: 40,
                     },
                 });
             }
