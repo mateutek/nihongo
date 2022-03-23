@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { useEffect, useState } from 'react';
 import Flashcard from '../services/flashcard';
-import { DataDao, DataJapanese, SingleDataDao } from './data';
+import { DataDao, DataJapanese, questionsTotal, SingleDataDao } from './data';
 import { useDocumentData } from 'react-firebase-hooks/firestore';
 import { db as firebaseDB } from '../services/firebase';
 import { collection, doc, getDocs } from 'firebase/firestore';
@@ -28,6 +28,10 @@ interface DataContextType {
     flashcards: Flashcard[];
     pickQuestions: (numberOfQuestions: number) => void;
     pickedFlashcards: RandomData[];
+    tags: string[];
+    pickTags: (newTags: string[]) => void;
+    pickAllTags: () => void;
+    maxQuestions: number;
 }
 
 let DataContext = React.createContext<DataContextType>(null!);
@@ -45,6 +49,18 @@ function initializeFlashcards(data: DataDao): Flashcard[] {
     });
 }
 
+export function buildTags(flashcards: DataDao): Array<string> {
+    const tags = flashcards.reduce((set, f) => {
+        f.tags.forEach((t) => {
+            set.add(t);
+        });
+        console.log(set);
+        return set;
+    }, new Set<string>());
+
+    return Array.from(tags);
+}
+
 async function loadFlashcards() {
     const flashcardsSnapshot = await getDocs(collection(firebaseDB, 'flashcards'));
     const flashcardsData: DataDao = [];
@@ -55,6 +71,7 @@ async function loadFlashcards() {
 }
 
 function drawRandomFlashcards(flashcards: Flashcard[], numberOfQuestions: number): RandomData[] {
+    console.log(flashcards);
     const pickedFlashcards = _.sampleSize(flashcards, numberOfQuestions);
     return pickedFlashcards.map((flashcard) => {
         const questionNumber = _.random(0, 3);
@@ -88,6 +105,11 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
 
     const [pickedFlashcards, setPickedFlashcards] = useState<RandomData[]>([]);
 
+    const [tags, setTags] = useState<Array<string>>(() => (LS.data?.tags ? LS.data.tags : []));
+    const [maxQuestions, setMaxQuestions] = useState(() =>
+        LS.data?.flashcards ? LS.data?.flashcards.length : questionsTotal,
+    );
+
     useEffect(() => {
         async function doLoad() {
             if (!loadingSettings) {
@@ -98,7 +120,15 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
                     const flashcardsData = await loadFlashcards();
                     setLoadingFlashcards(false);
                     setFlashcards(initializeFlashcards(flashcardsData));
-                    saveToLS(settings?.versionId, flashcardsData);
+                    const tags = buildTags(flashcardsData);
+                    await saveToLS(settings?.versionId, flashcardsData, tags);
+                    setMaxQuestions(flashcardsData.length);
+                } else {
+                    if (LS.data?.flashcards) {
+                        const tags = buildTags(LS.data.flashcards);
+                        setTags(tags);
+                        await saveToLS(undefined, undefined, tags);
+                    }
                 }
             }
         }
@@ -113,9 +143,31 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         }
     }, [loadingSettings, loadingFlashcards]);
 
-    const saveToLS = async (newVersionId: string, flashcardsData: DataDao) => {
-        LS.data!.versionId = newVersionId;
-        LS.data!.flashcards = flashcardsData;
+    useEffect(() => {
+        const filteredFlashcards = LS.data?.flashcards.filter((flashcard) => {
+            return _.intersection(flashcard.tags, tags).length > 0;
+        });
+
+        if (filteredFlashcards) {
+            setFlashcards(initializeFlashcards(filteredFlashcards));
+            setMaxQuestions(filteredFlashcards.length);
+        } else {
+            setFlashcards([]);
+            setMaxQuestions(0);
+        }
+    }, [tags]);
+
+    const saveToLS = async (newVersionId?: string, flashcardsData?: DataDao, tags?: string[]) => {
+        if (newVersionId) {
+            LS.data!.versionId = newVersionId;
+        }
+        if (flashcardsData) {
+            LS.data!.flashcards = flashcardsData;
+        }
+
+        if (tags) {
+            LS.data!.tags = tags;
+        }
         await LS.write();
     };
 
@@ -125,7 +177,17 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         navigate('/quiz');
     }
 
-    let value = { flashcards, loadingData, pickQuestions, pickedFlashcards };
+    function pickTags(newTags: string[]) {
+        setTags(newTags);
+    }
+
+    function pickAllTags() {
+        if (LS.data?.tags) {
+            setTags(LS.data?.tags);
+        }
+    }
+
+    let value = { flashcards, loadingData, pickQuestions, pickedFlashcards, tags, pickTags, maxQuestions, pickAllTags };
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 }

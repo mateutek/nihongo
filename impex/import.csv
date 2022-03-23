@@ -1,170 +1,210 @@
-id,japanese.kana,japanese.kanji,japanese.romaji,polish
-1,わたし,私,wa.ta.shi,ja
-2,くるま,車,ku.ru.ma,samochód
-3,かぞく,家族,ka.zo.ku,rodzina
-4,ちち,父,chi.chi,ojciec
-5,はは,母,ha.ha,matka
-6,あなた,貴女,a.na.ta,ty
-7,あのひと,あの人,a.no.hi.to,on/ona
-8,せんせい,先生,se.n.se.i,nauczyciel
-9,がくせい,学生,ga.ku.se.i,uczeń
-10,かいしゃいん,会社員,ka.i.sha.i.n,pracownik firmy
-11,ぎんこういん,銀行員,gi.n.kō.i.n,pracownik banku
-12,いしゃ,医者,i.shia,lekarz
-13,けんきょしゃ,検挙者,ke.n.kyō.sha,naukowiec
-14,だいがく,大学,da.i.ga.ku,uniwersytet
-15,びょういん,病院,byō.i.n,szpital
-16,だれ,-,da.re,kto
-17,ほん,本,ho.n,książka
-18,じしょ,辞書,ji.sho,słownik
-19,ざっし,雑誌,zas.shi,magazyn
-20,しんぶん,新聞,shi.n.bu.n,gazeta
-21,ノート,-,nō.to,zeszyt
-22,てちょう,手帳,te.chō,organizer
-23,めいし,名刺,me.i.shi,wizytówka
-24,カート,-,kā.to,karta kredytowa
-25,えんぴつ,鉛筆,e.n.pi.tsu,ołówek
-26,ボールペン,-,bō.ru.pe.n,długopis
-27,シャープペンシル,-,shā.pu.pe.n.shi.ru,ołówek mechaniczny
-28,かぎ,鍵,ka.gi,klucz
-29,とけい,時計,to.ka.i,zegarek
-30,かさ,傘,ka.sa,parasol
-31,かばん,-,ka.ba.n,torba
-32,テレビ,-,te.re.bi,telewizja
-33,ラジオ,-,ra.ji.o,radio
-34,カメラ,-,ka.me.ra,aparat
-35,コンピューター,-,ko.n.pyū.tā,komputer
-36,つくえ,机,tsu.ku.e,biurko
-37,いす,-,i.su,krzesło
-38,みやげ,土産,mi.ya.ge,prezent
-39,ここ,-,ko.ko,tutaj
-40,そこ,-,so.ko,tam
-41,あそこ,-,a.so.ko,tamto
-42,どこ,-,do.ko,gdzie
-43,こちら,-,ko.chi.ra,w tą stronę
-44,そちら,-,so.chi.ra,tędy (blisko słuchacza)
-45,あちら,-,a.chi.ra,tamtędy
-46,どちら,-,do.chi.ra,którędy
-47,きょうしつ,教室,kyō.shi.tsu,klasa
-48,しょくどう,食堂,sho.ku.dō,stołówka
-49,じむしょ,事務所,ji.mu.sho,biuro
-50,かいぎしつ,会議室,ka.i.gi.shi.tsu,sala konferencyjna
-51,うけつけ,受付,u.ke.tsu.ke,recepcja
-52,ロビー,-,ro.bii,lobby
-53,へや,部屋,he.ya,pokój
-54,トイレ,-,to.i.re,toaleta
-55,かいだん,階段,ka.i.da.n,schody
-56,エラベーター,-,e.re.bē.tā,winda
-57,エスカレーター,-,e.su.ka.rē.tā,schody ruchome
-58,じどうはんばいき,自動販売機,ji.dō.ha.n.ba.i.ki,automat
-59,でんわ,電話,de.n.wa,rozmowa telefoniczna
-60,くに,国,ku.ni,kraj
-61,かいしゃ,会社,ka.i.sha,firma
-62,うち,-,u.chi,dom
-63,くつ,靴,ku.tsu,buty
-64,ネクタイ,-,ne.ku.ta.i,krawat
-65,ワイン,-,wa.i.n,wino
-66,うりば,売り場,u.ri.ba,dział
-67,ちか,地下,chi.ka,piwnica
-68,-かい,-階,- ka.i,n-te piętro
-69,なんがい,何階,na.n.ga.i,które piętro
-70,-えん,-円,- e.n,- yen
-71,いくら,-,i.ku.ra,jak dużo
-72,ひゃく,百,hya.ku,sto
-73,せん,千,se.n,tysiąc
-74,まん,万,ma.n,dziesięć tysięcy
-75,すみません。,-,su.mi.ma.se.n,przepraszam
-76,どうも,-,dō.mo,dziękuję
-77,たべます,食べます,ta.be.ma.su,jeść
-78,のみます,飲みます,no.mi.ma.su,pić
-79,すいます,吸います,su.i.ma.su,palić
-80,みます,見ます,mi.ma.su,patrzeć/ oglądać
-81,ききます,聞きます,ki.ki.ma.su,słuchać
-82,よみます,読みます,yo.mi.ma.su,czytać
-83,かきます,,ka.ki.ma.su,pisać
-84,かいます,,ka.i.ma.su,kupować
-85,とります,,to.ri.ma.su,robić (zdjęcie)
-86,します,,shi.ma.su,robić/ grać
-87,あいます,,a.i.ma.su,spotykać
-88,ごはん,,go.ha.n,posiłek/ gotowany ryż
-89,あさごはん,,a.sa.go.ha.n,śniadanie
-90,ひるごはん,,hi.ru.go.ha.n,obiad/lunch
-91,ばんごはん,,ba.n.go.ha.n,kolacja
-92,パン,,pa.n,chleb
-93,たまご,卵,ta.ma.go,jajko
-94,にく,,ni.ku,mięso
-95,すかね,,su.ka.ne,ryba
-96,やさい,,ya.sa.i,warzywo
-97,くだもの,,ku.da.mo.no,owoc
-98,みず,,mi.zu,woda
-99,おちゃ,,o.cha,zielona herbata
-100,こうちゃ,,kō.cha,czarna herbata
-101,ぎゅうにゅう,,gyu.u.nyu.u,mleko
-102,ジュイス,,ju.i.su,sok
-103,ビール,,bi.i.ru,piwo
-104,おさけ,,o.sa.ke,alkohol
-105,たばこ,,ta.ba.ko,papierosy
-106,てがみ,,te.ga.mi,list
-107,レポート,,re.po.to,raport
-108,しゃしん,,sha.shi.n,fotografia
-109,ビデオ,,bi.de.o,video
-110,みせ,,mi.se,sklep
-111,にわ,,ni.wa,ogród
-112,しゃくだい,,sha.ku.da.i,praca domowa
-113,レニス,,te.ni.su,tenis
-114,サッカー,,sa.kkā,piłka nożna
-115,おはなみ,,o.ha.na.mi,oglądanie wiśni
-116,なに,,na.ni,co
-117,いっしょに,,i.ssho.ni,razem
-118,ちょっと,,cho.tto,trochę
-119,いつも,,i.tsu.mo,zawsze / zazwyczaj
-120,ときどき,,to.ki.do.ki,czasem
-121,それから,,so.re.ka.ra,później
-122,いいですね,,i.i.de.su.ne,To dobrze
-123,わかりました,,wa.ka.ri.ma.shi.ta,Rozumiem
-124,なんですか,,na.n.de.su.ka,Tak?
-125,じゃ,,ja,Do zobaczenia jutro
-126,ハンサム,,Ha.n.sa.mu,przystojny
-127,きれい,綺麗,ki.re.i,piękny / czysty
-128,しずか,静か,shi.zu.ka,cichy
-129,にぎじゃか,賑やか,ni.gi.ja.ka,"pełen życia, gwarny"
-130,しんせつ,親切,shi.n.se.tsu,pomocny / uprzejmy
-131,ひま,暇,hi.ma,wolny (czas)
-132,げんき,元気,ge.n.ki,zdrowy / energiczny
-133,べんり,便利,be.n.ri,wygodny
-134,すてき,素敵,su.te.ki,fajnie / miło
-135,おおき,大き,o.o.ki,duży
-136,ちいさい,小さい,chi.i.sa.i,mały
-137,あたらしい,新しい,a.ta.ra.shi.i,nowy/ świeży
-138,ふるい,古い,fu.ru.i,stary (obiekt)
-139,いい(よい),良い,i.i,dobry
-140,わるい,悪い,wa.ru.i,zły
-141,あつい,暑い,a.tsu.i,gorący
-142,さむい,寒い,sa.mu.i,zimny (temperatura)
-142,つめたい,冷たい,tsu.me.ta.i.,zimy (dotyk)
-143,むずかしい,難しい,mu.zu.ka.shi.i.,trudny
-144,やさしい,易しい,ya.sa.shi.i,łatwy
-145,たかい,高い,ta.ka.i,"drogi,wysoki"
-146,やすい,安い,ja.sa.i,tani
-147,おもしろい,面白い,o.mo.shi.ro.i,interesujący
-148,おいしい,美味しい,o.i.shi.i,smaczny
-149,いそがしい,忙しい,i.zu.ga.shi.i,zajęty
-150,たのしい,楽しい,ta.no.shi.i,przyjemny
-151,しろい,白い,shi.ro.i,biały
-152,くろい,黒い,ku.ro.i,czarny
-153,あかい,赤い,a.ka.i,red
-154,あおい,青い,a.o.i,niebieeski
-155,さくら,桜,sa.ku.ra,kwiat wiśni
-156,やま,山,ya.ma,góra
-157,まち,町,ma.chi,małe miasto
-158,たべもの,食べ物,ta.be.mo.no,jedzenie
-159,ところ,所,to.ko.ro,miejsce
-160,りょう,寮,ri.yo.o,hostel/ akademik
-161,レストラン,,re.su.to.ran,restauracja
-162,せいかつ,生活,sei.ka.tsu,życie
-163,[お]しごと,[お]仕事,shi.go.to,praca/ biznes
-164,どう,如何,do.o,jak?
-165,どんな~,,do.n.na,jakiego rodzaju?
-166,とても,迚も,to.te.mo,bardzo
-167,あまり,余り,a.ma.ri,bynajmniej
-168,そして,而して,so.shi.te,i (do łączenia zdań)
+id,japanese.kana,japanese.kanji,japanese.romaji,polish,tags
+1,わたし,私,wa.ta.shi,ja,lesson 1
+2,くるま,車,ku.ru.ma,samochód,lesson 1
+3,かぞく,家族,ka.zo.ku,rodzina,lesson 7
+4,ちち,父,chi.chi,ojciec,lesson 7
+5,はは,母,ha.ha,matka,lesson 7
+6,あなた,貴女,a.na.ta,ty,lesson 1
+7,あのひと,あの人,a.no.hi.to,on/ona,lesson 1
+8,せんせい,先生,se.n.se.i,nauczyciel,lesson 1
+9,がくせい,学生,ga.ku.se.i,uczeń,lesson 1
+10,かいしゃいん,会社員,ka.i.sha.i.n,pracownik firmy,lesson 1
+11,ぎんこういん,銀行員,gi.n.kō.i.n,pracownik banku,lesson 1
+12,いしゃ,医者,i.sha,lekarz,lesson 1
+13,けんきょしゃ,検挙者,ke.n.kyō.sha,naukowiec,lesson 1
+14,だいがく,大学,da.i.ga.ku,uniwersytet,lesson 1
+15,びょういん,病院,byō.i.n,szpital,lesson 1
+16,だれ,-,da.re,kto,lesson 1
+17,ほん,本,ho.n,książka,lesson 1
+18,じしょ,辞書,ji.sho,słownik,lesson 1
+19,ざっし,雑誌,zas.shi,magazyn,lesson 1
+20,しんぶん,新聞,shi.n.bu.n,gazeta,lesson 1
+21,ノート,-,nō.to,zeszyt,lesson 1
+22,てちょう,手帳,te.chō,organizer,lesson 1
+23,めいし,名刺,me.i.shi,wizytówka,lesson 1
+24,カート,-,kā.to,karta kredytowa,lesson 1
+25,えんぴつ,鉛筆,e.n.pi.tsu,ołówek,lesson 1
+26,ボールペン,-,bō.ru.pe.n,długopis,lesson 1
+27,シャープペンシル,-,shā.pu.pe.n.shi.ru,ołówek mechaniczny,lesson 1
+28,かぎ,鍵,ka.gi,klucz,lesson 1
+29,とけい,時計,to.ke.i,zegarek,lesson 1
+30,かさ,傘,ka.sa,parasol,lesson 1
+31,かばん,-,ka.ba.n,torba,lesson 1
+32,テレビ,-,te.re.bi,telewizja,lesson 1
+33,ラジオ,-,ra.ji.o,radio,lesson 1
+34,カメラ,-,ka.me.ra,aparat,lesson 1
+35,コンピューター,-,ko.n.pyū.tā,komputer,lesson 1
+36,つくえ,机,tsu.ku.e,biurko,lesson 1
+37,いす,-,i.su,krzesło,lesson 1
+38,みやげ,土産,mi.ya.ge,prezent,lesson 1
+39,ここ,-,ko.ko,tutaj,lesson 2
+40,そこ,-,so.ko,tam,lesson 2
+41,あそこ,-,a.so.ko,tamto,lesson 2
+42,どこ,-,do.ko,gdzie,lesson 2
+43,こちら,-,ko.chi.ra,w tą stronę,lesson 2
+44,そちら,-,so.chi.ra,tędy (blisko słuchacza),lesson 2
+45,あちら,-,a.chi.ra,tamtędy,lesson 2
+46,どちら,-,do.chi.ra,którędy,lesson 2
+47,きょうしつ,教室,kyō.shi.tsu,klasa,lesson 2
+48,しょくどう,食堂,sho.ku.dō,stołówka,lesson 2
+49,じむしょ,事務所,ji.mu.sho,biuro,lesson 2
+50,かいぎしつ,会議室,ka.i.gi.shi.tsu,sala konferencyjna,lesson 2
+51,うけつけ,受付,u.ke.tsu.ke,recepcja,lesson 2
+52,ロビー,-,ro.bii,lobby,lesson 2
+53,へや,部屋,he.ya,pokój,lesson 2
+54,トイレ,-,to.i.re,toaleta,lesson 2
+55,かいだん,階段,ka.i.da.n,schody,lesson 2
+56,エラベーター,-,e.re.bē.tā,winda,lesson 2
+57,エスカレーター,-,e.su.ka.rē.tā,schody ruchome,lesson 2
+58,じどうはんばいき,自動販売機,ji.dō.ha.n.ba.i.ki,automat,lesson 2
+59,でんわ,電話,de.n.wa,rozmowa telefoniczna,lesson 2
+60,くに,国,ku.ni,kraj,lesson 2
+61,かいしゃ,会社,ka.i.sha,firma,lesson 2
+62,うち,-,u.chi,dom,lesson 2
+63,くつ,靴,ku.tsu,buty,lesson 2
+64,ネクタイ,-,ne.ku.ta.i,krawat,lesson 2
+65,ワイン,-,wa.i.n,wino,lesson 2
+66,うりば,売り場,u.ri.ba,dział,lesson 2
+67,ちか,地下,chi.ka,piwnica,lesson 2
+68,-かい,-階,- ka.i,n-te piętro,lesson 2
+69,なんがい,何階,na.n.ga.i,które piętro,lesson 2
+70,-えん,-円,- e.n,- yen,lesson 2
+71,いくら,-,i.ku.ra,jak dużo,lesson 3
+72,ひゃく,百,hya.ku,sto,lesson 3
+73,せん,千,se.n,tysiąc,lesson 3
+74,まん,万,ma.n,dziesięć tysięcy,lesson 3
+75,すみません。,-,su.mi.ma.se.n,przepraszam,lesson 3
+76,どうも,-,dō.mo,dziękuję,lesson 3
+77,たべます,食べます,ta.be.ma.su,jeść,lesson 3
+78,のみます,飲みます,no.mi.ma.su,pić,lesson 3
+79,すいます,吸います,su.i.ma.su,palić,lesson 3
+80,みます,見ます,mi.ma.su,patrzeć/ oglądać,lesson 3
+81,ききます,聞きます,ki.ki.ma.su,słuchać,lesson 3
+82,よみます,読みます,yo.mi.ma.su,czytać,lesson 3
+83,かきます,,ka.ki.ma.su,pisać,lesson 3
+84,かいます,,ka.i.ma.su,kupować,lesson 3
+85,とります,,to.ri.ma.su,robić (zdjęcie),lesson 3
+86,します,,shi.ma.su,robić/ grać,lesson 3
+87,あいます,,a.i.ma.su,spotykać,lesson 3
+88,ごはん,,go.ha.n,posiłek/ gotowany ryż,lesson 3
+89,あさごはん,,a.sa.go.ha.n,śniadanie,lesson 3
+90,ひるごはん,,hi.ru.go.ha.n,obiad/lunch,lesson 3
+91,ばんごはん,,ba.n.go.ha.n,kolacja,lesson 3
+92,パン,,pa.n,chleb,lesson 3
+93,たまご,卵,ta.ma.go,jajko,lesson 3
+94,にく,,ni.ku,mięso,lesson 3
+95,さかな,,sa.ka.na,ryba,lesson 3
+96,やさい,,ya.sa.i,warzywo,lesson 3
+97,くだもの,,ku.da.mo.no,owoc,lesson 3
+98,みず,,mi.zu,woda,lesson 3
+99,おちゃ,,o.cha,zielona herbata,lesson 3
+100,こうちゃ,,kō.cha,czarna herbata,lesson 3
+101,ぎゅうにゅう,,gyu.u.nyu.u,mleko,lesson 3
+102,ジュイス,,ju.i.su,sok,lesson 3
+103,ビール,,bi.i.ru,piwo,lesson 3
+104,おさけ,,o.sa.ke,alkohol,lesson 3
+105,たばこ,,ta.ba.ko,papierosy,lesson 3
+106,てがみ,,te.ga.mi,list,lesson 3
+107,レポート,,re.po.to,raport,lesson 4
+108,しゃしん,,sha.shi.n,fotografia,lesson 4
+109,ビデオ,,bi.de.o,video,lesson 4
+110,みせ,,mi.se,sklep,lesson 4
+111,にわ,,ni.wa,ogród,lesson 4
+112,しゃくだい,,sha.ku.da.i,praca domowa,lesson 4
+113,レニス,,te.ni.su,tenis,lesson 4
+114,サッカー,,sa.kkā,piłka nożna,lesson 4
+115,おはなみ,,o.ha.na.mi,oglądanie wiśni,lesson 4
+116,なに,,na.ni,co,lesson 4
+117,いっしょに,,i.ssho.ni,razem,lesson 4
+118,ちょっと,,cho.tto,trochę,lesson 4
+119,いつも,,i.tsu.mo,zawsze / zazwyczaj,lesson 4
+120,ときどき,,to.ki.do.ki,czasem,lesson 4
+121,それから,,so.re.ka.ra,później,lesson 4
+122,いいですね,,i.i.de.su.ne,To dobrze,lesson 4
+123,わかりました,,wa.ka.ri.ma.shi.ta,Rozumiem,lesson 4
+124,なんですか,,na.n.de.su.ka,Tak?,lesson 4
+125,じゃ,,ja,Do zobaczenia jutro,lesson 4
+126,ハンサム,,ha.n.sa.mu,przystojny,lesson 8
+127,きれい,綺麗,ki.re.i,piękny / czysty,lesson 8
+128,しずか,静か,shi.zu.ka,cichy,lesson 8
+129,にぎじゃか,賑やか,ni.gi.ja.ka,pełen życia/ gwarny,lesson 8
+130,しんせつ,親切,shi.n.se.tsu,pomocny / uprzejmy,lesson 8
+131,ひま,暇,hi.ma,wolny (czas),lesson 8
+132,げんき,元気,ge.n.ki,zdrowy / energiczny,lesson 8
+133,べんり,便利,be.n.ri,wygodny,lesson 8
+134,すてき,素敵,su.te.ki,fajnie / miło,lesson 8
+135,おおき,大き,o.o.ki,duży,lesson 8
+136,ちいさい,小さい,chi.i.sa.i,mały,lesson 8
+137,あたらしい,新しい,a.ta.ra.shi.i,nowy/ świeży,lesson 8
+138,ふるい,古い,fu.ru.i,stary (obiekt),lesson 8
+139,いい(よい),良い,i.i,dobry,lesson 8
+140,わるい,悪い,wa.ru.i,zły,lesson 8
+141,あつい,暑い,a.tsu.i,gorący,lesson 8
+142,さむい,寒い,sa.mu.i,zimny (temperatura),lesson 8
+142,つめたい,冷たい,tsu.me.ta.i.,zimy (dotyk),lesson 8
+143,むずかしい,難しい,mu.zu.ka.shi.i,trudny,lesson 8
+144,やさしい,易しい,ya.sa.shi.i,łatwy,lesson 8
+145,たかい,高い,ta.ka.i,drogi/ wysoki,lesson 8
+146,やすい,安い,ja.sa.i,tani,lesson 8
+147,おもしろい,面白い,o.mo.shi.ro.i,interesujący,lesson 8
+148,おいしい,美味しい,o.i.shi.i,smaczny,lesson 8
+149,いそがしい,忙しい,i.zu.ga.shi.i,zajęty,lesson 8
+150,たのしい,楽しい,ta.no.shi.i,przyjemny,lesson 8
+151,しろい,白い,shi.ro.i,biały,lesson 8
+152,くろい,黒い,ku.ro.i,czarny,lesson 8
+153,あかい,赤い,a.ka.i,red,lesson 8
+154,あおい,青い,a.o.i,niebieski,lesson 8
+155,さくら,桜,sa.ku.ra,kwiat wiśni,lesson 8
+156,やま,山,ya.ma,góra,lesson 8
+157,まち,町,ma.chi,małe miasto,lesson 8
+158,たべもの,食べ物,ta.be.mo.no,jedzenie,lesson 8
+159,ところ,所,to.ko.ro,miejsce,lesson 8
+160,りょう,寮,ri.yo.o,hostel/ akademik,lesson 8
+161,レストラン,,re.su.to.ran,restauracja,lesson 8
+162,せいかつ,生活,sei.ka.tsu,życie,lesson 8
+163,[お]しごと,[お]仕事,shi.go.to,praca/ biznes,lesson 8
+164,どう,如何,do.o,jak?,lesson 8
+165,どんな~,,do.n.na,jakiego rodzaju?,lesson 8
+166,とても,迚も,to.te.mo,bardzo,lesson 8
+167,あまり,余り,a.ma.ri,bynajmniej,lesson 8
+168,そして,而して,so.shi.te,i (do łączenia zdań),lesson 8
+169,きります,着ます,ki.ri.ma.su,ciąć,lesson 7
+170,おくります,送ります,o.ku.ri.ma.su,wysłać,lesson 7
+171,あげます,上げます,a.ge.ma.su,dawdać,lesson 7
+172,もらいます,貰います,mo.ra.i.ma.su,otrzymać,lesson 7
+173,かします,貸します,ka.shi.ma.su,pożyczyc komuś,lesson 7
+174,かります,借ります,ka.ri.ma.su,pożyczyć od kogoś,lesson 7
+175,おしえます,教えます,o.shi.e.ma.su,nauczać (kogoś),lesson 7
+176,ならいます,習います,na.ra.i.ma.su,uczyć się,lesson 7
+177,かけます,掛けます,ka.ke.ma.su,wykonać telefon (rozmowę),lesson 7
+178,て,手,te,ręka,lesson 7
+179,はし,箸,ha.shi,pałeczki drewniane do jedzenia,lesson 7
+180,スプーン,,su.pu.n,łyżka,lesson 7
+181,ナイフ,,na.i.fu,nóż,lesson 7
+182,フォーク,,fō.ku,widelec,lesson 7
+183,はさみ,鋏,ha.sa.mi,nożyczki,lesson 7
+184,パソコン,,po.so.ko.n,komputer,lesson 7
+185,パンチ,,pa.n.chi,"dziurkacz,uderzenie",lesson 7
+186,ホッチキス,,ho.ch.chi.ki.su,zszywacz,lesson 7
+187,セロハンテープ,,se.ro.ha.n.ta.pu,tasma klejaca,lesson 7
+188,けしゴム,消しゴム,ke.shi.go.mu,gumka do mazania,lesson 7
+189,かみ,紙,ka.mi,papier,lesson 7
+190,はな,花,ha.na,kwiat,lesson 7
+191,シャツ,,shi.ya.tsu,koszula,lesson 7
+192,プレゼント,,pu.re.ze.n.to,prezent,lesson 7
+193,にもつ,荷物,ni.mo.tsu,bagaż,lesson 7
+194,おかね,お金,o.ka.ne,pieniądze,lesson 7
+195,きっぷ,切符,ki.p.pu,bilet,lesson 7
+196,クリスマス,,ku.ri.su.ma.su,św. bożego narodzenia,lesson 7
+197,おとっさん,お父さん,o.to.s.sa.n,ojciec (czyjś),lesson 7
+198,おかあさん,お母さん,o.ka.a.sa.n,matka (czyjaś),lesson 7
+199,あに,兄,o.ni,starszy brat (mój),lesson 7
+200,おとうと,弟,o.to.o.to,młodszy brat (mój),lesson 7
+201,あね,姉,o.ne,starsza siostra (moja),lesson 7
+202,いもうと,妹,i.mo.o.to,młodsza siostra (moja),lesson 7
+203,むすめ,娘,mu.su.me,córka,lesson 7
+204,むすこ,息子,mu.su.ko,syn,lesson 7
+205,こども,子供,ko.do.mo,dzieci,lesson 7
+206,もう,,mo.o,już,lesson 7
+207,まだ,,ma.da,jeszcze nie,lesson 7
+208,それから,,so.re.ka.ra,wkrótce,lesson 7

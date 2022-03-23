@@ -1,9 +1,21 @@
 import Grid from '@mui/material/Grid';
-import React from 'react';
+import React, { useState } from 'react';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import { useSettings } from '../data/SettingsProvider';
-import { FormControlLabel, FormGroup, Switch, TextField } from '@mui/material';
+import {
+    Button,
+    Dialog,
+    DialogContent,
+    DialogTitle,
+    FormControlLabel,
+    DialogActions,
+    FormGroup,
+    Switch,
+    TextField,
+    DialogContentText,
+} from '@mui/material';
+import LS, { loadDefaultData } from '../data/lowdb';
 
 export default function Settings() {
     const { userSettings, saveSetting } = useSettings();
@@ -13,6 +25,22 @@ export default function Settings() {
 
     const handleNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         saveSetting({ [event.target.name]: parseInt(event.target.value) });
+    };
+
+    const [open, setOpen] = useState(false);
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const handleClear = async () => {
+        LS.data = loadDefaultData();
+        LS.write();
+        setOpen(false);
+        window.location.reload();
     };
 
     return (
@@ -63,6 +91,23 @@ export default function Settings() {
                             }}
                         />
                     </FormGroup>
+                    <Button variant="outlined" onClick={handleClickOpen} sx={{ mt: 2 }}>
+                        Odśwież dane
+                    </Button>
+                    <Dialog open={open} onClose={handleClose}>
+                        <DialogTitle id="alert-dialog-title">Czy chcesz odświeżyć lokalne dane?</DialogTitle>
+                        <DialogContent>
+                            <DialogContentText>Twoje postępy nie zostaną wyczyszczone.</DialogContentText>
+                        </DialogContent>
+                        <DialogActions>
+                            <Button onClick={handleClose} autoFocus>
+                                Anuluj
+                            </Button>
+                            <Button color="error" onClick={handleClear}>
+                                Wyczyść
+                            </Button>
+                        </DialogActions>
+                    </Dialog>
                 </Paper>
             </Grid>
         </Grid>

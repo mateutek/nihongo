@@ -4,6 +4,8 @@ import { ButtonGroup, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import MinusIcon from '@mui/icons-material/Remove';
 import PlusIcon from '@mui/icons-material/Add';
+import FirstPageIcon from '@mui/icons-material/FirstPage';
+import LastPageIcon from '@mui/icons-material/LastPage';
 import { useData } from '../data/DataProvider';
 import { useSettings } from '../data/SettingsProvider';
 
@@ -26,6 +28,12 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
         setQuestions(userSettings.startingQuestions);
     }, [userSettings.startingQuestions]);
 
+    useEffect(() => {
+        if (questions > props.maxQuestions) {
+            setQuestions(props.maxQuestions);
+        }
+    }, [props.maxQuestions, questions]);
+
     function subtract() {
         const newQuestions = questions - step >= minimumQuestions ? questions - step : minimumQuestions;
         setQuestions(newQuestions);
@@ -34,6 +42,14 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
     function add() {
         const newQuestions = questions + step <= props.maxQuestions ? questions + step : props.maxQuestions;
         setQuestions(newQuestions);
+    }
+
+    function min() {
+        setQuestions(minimumQuestions);
+    }
+
+    function max() {
+        setQuestions(props.maxQuestions);
     }
 
     return (
@@ -45,7 +61,15 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
                 </Typography>
                 <ButtonGroup variant="outlined" aria-label="outlined primary button group">
                     <Button
-                        disabled={questions === minimumQuestions}
+                        disabled={questions === minimumQuestions || props.maxQuestions === 0}
+                        onClick={() => {
+                            min();
+                        }}
+                    >
+                        <FirstPageIcon />
+                    </Button>
+                    <Button
+                        disabled={questions === minimumQuestions || props.maxQuestions === 0}
                         onClick={() => {
                             subtract();
                         }}
@@ -53,12 +77,20 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
                         <MinusIcon />
                     </Button>
                     <Button
-                        disabled={questions === props.maxQuestions}
+                        disabled={questions === props.maxQuestions || props.maxQuestions === 0}
                         onClick={() => {
                             add();
                         }}
                     >
                         <PlusIcon />
+                    </Button>
+                    <Button
+                        disabled={questions === props.maxQuestions || props.maxQuestions === 0}
+                        onClick={() => {
+                            max();
+                        }}
+                    >
+                        <LastPageIcon />
                     </Button>
                 </ButtonGroup>
             </Box>
@@ -67,7 +99,12 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
                     {questions} pytań / {props.maxQuestions} możliwych
                 </Typography>
             </Box>
-            <Button onClick={() => pickQuestions(questions)} variant="contained" size="small">
+            <Button
+                onClick={() => pickQuestions(questions)}
+                variant="contained"
+                size="small"
+                disabled={props.maxQuestions === 0}
+            >
                 Trenuj
             </Button>
         </>

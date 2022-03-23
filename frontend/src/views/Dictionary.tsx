@@ -1,8 +1,9 @@
 import Grid from '@mui/material/Grid';
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography } from '@mui/material';
-import { DataGrid, GridColDef, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid';
-import questionsData from '../data/data';
+import { DataGrid, GridColDef, GridRenderCellParams, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid';
+import LS from '../data/lowdb';
+import Link from '@mui/material/Link';
 
 function getColumnData(params: GridValueGetterParams) {
     return params.row.japanese[params.field] || '-';
@@ -20,7 +21,19 @@ const columns: GridColDef[] = [
         field: 'kanji',
         headerName: 'Kanji',
         width: 150,
-        valueGetter: getColumnData,
+        renderCell: (params: GridRenderCellParams<Date>) =>
+            params.row.japanese.kanji ? (
+                <Link
+                    href={`https://jisho.org/search/${params.row.japanese.kanji}%20%23kanji`}
+                    underline="hover"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    {params.row.japanese.kanji}
+                </Link>
+            ) : (
+                <span> - </span>
+            ),
     },
     {
         field: 'romaji',
@@ -33,10 +46,17 @@ const columns: GridColDef[] = [
         headerName: 'Polski',
         width: 150,
     },
+    {
+        field: 'tags',
+        headerName: 'Tagi',
+    },
 ];
 
 export default function Dictionary() {
-    const [pageSize, setPageSize] = React.useState<number>(25);
+    const [pageSize, setPageSize] = useState<number>(25);
+
+    const [data] = useState(() => (LS.data?.flashcards ? LS.data?.flashcards : []));
+
     return (
         <Grid container>
             <Grid item xs={12} sx={{ minHeight: '70vh' }}>
@@ -47,7 +67,7 @@ export default function Dictionary() {
                     <div style={{ display: 'flex', height: '100%' }}>
                         <div style={{ flexGrow: 1 }}>
                             <DataGrid
-                                rows={questionsData}
+                                rows={data}
                                 columns={columns}
                                 pageSize={pageSize}
                                 onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}

@@ -9,6 +9,7 @@ export type SingleDataDao = {
     id: string;
     japanese: DataJapanese;
     polish: string;
+    tags: string[];
 };
 
 export type DataDao = Array<SingleDataDao>;

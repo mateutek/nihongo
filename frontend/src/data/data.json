@@ -6,7 +6,8 @@
             "kanji": "私",
             "romaji": "wa.ta.shi"
         },
-        "polish": "ja"
+        "polish": "ja",
+        "tags": []
     },
     {
         "id": "2",
@@ -15,7 +16,8 @@
             "kanji": "車",
             "romaji": "ku.ru.ma"
         },
-        "polish": "samochód"
+        "polish": "samochód",
+        "tags": []
     },
     {
         "id": "3",
@@ -24,7 +26,8 @@
             "kanji": "家族",
             "romaji": "ka.zo.ku"
         },
-        "polish": "rodzina"
+        "polish": "rodzina",
+        "tags": []
     },
     {
         "id": "4",
@@ -33,7 +36,8 @@
             "kanji": "父",
             "romaji": "chi.chi"
         },
-        "polish": "ojciec"
+        "polish": "ojciec",
+        "tags": []
     },
     {
         "id": "5",
@@ -42,7 +46,8 @@
             "kanji": "母",
             "romaji": "ha.ha"
         },
-        "polish": "matka"
+        "polish": "matka",
+        "tags": []
     },
     {
         "id": "6",
@@ -51,7 +56,8 @@
             "kanji": "貴女",
             "romaji": "a.na.ta"
         },
-        "polish": "ty"
+        "polish": "ty",
+        "tags": []
     },
     {
         "id": "7",
@@ -60,7 +66,8 @@
             "kanji": "あの人",
             "romaji": "a.no.hi.to"
         },
-        "polish": "on/ona"
+        "polish": "on/ona",
+        "tags": []
     },
     {
         "id": "8",
@@ -69,7 +76,8 @@
             "kanji": "先生",
             "romaji": "se.n.se.i"
         },
-        "polish": "nauczyciel"
+        "polish": "nauczyciel",
+        "tags": []
     },
     {
         "id": "9",
@@ -78,7 +86,8 @@
             "kanji": "学生",
             "romaji": "ga.ku.se.i"
         },
-        "polish": "uczeń"
+        "polish": "uczeń",
+        "tags": []
     },
     {
         "id": "10",
@@ -87,7 +96,8 @@
             "kanji": "会社員",
             "romaji": "ka.i.sha.i.n"
         },
-        "polish": "pracownik firmy"
+        "polish": "pracownik firmy",
+        "tags": []
     },
     {
         "id": "11",
@@ -96,7 +106,8 @@
             "kanji": "銀行員",
             "romaji": "gi.n.kō.i.n"
         },
-        "polish": "pracownik banku"
+        "polish": "pracownik banku",
+        "tags": []
     },
     {
         "id": "12",
@@ -105,7 +116,8 @@
             "kanji": "医者",
             "romaji": "i.shia"
         },
-        "polish": "lekarz"
+        "polish": "lekarz",
+        "tags": []
     },
     {
         "id": "13",
@@ -114,7 +126,8 @@
             "kanji": "検挙者",
             "romaji": "ke.n.kyō.sha"
         },
-        "polish": "naukowiec"
+        "polish": "naukowiec",
+        "tags": []
     },
     {
         "id": "14",
@@ -123,7 +136,8 @@
             "kanji": "大学",
             "romaji": "da.i.ga.ku"
         },
-        "polish": "uniwersytet"
+        "polish": "uniwersytet",
+        "tags": []
     },
     {
         "id": "15",
@@ -132,7 +146,8 @@
             "kanji": "病院",
             "romaji": "byō.i.n"
         },
-        "polish": "szpital"
+        "polish": "szpital",
+        "tags": []
     },
     {
         "id": "16",
@@ -141,7 +156,8 @@
             "kanji": "-",
             "romaji": "da.re"
         },
-        "polish": "kto"
+        "polish": "kto",
+        "tags": []
     },
     {
         "id": "17",
@@ -150,7 +166,8 @@
             "kanji": "本",
             "romaji": "ho.n"
         },
-        "polish": "książka"
+        "polish": "książka",
+        "tags": []
     },
     {
         "id": "18",
@@ -159,7 +176,8 @@
             "kanji": "辞書",
             "romaji": "ji.sho"
         },
-        "polish": "słownik"
+        "polish": "słownik",
+        "tags": []
     },
     {
         "id": "19",
@@ -168,7 +186,8 @@
             "kanji": "雑誌",
             "romaji": "zas.shi"
         },
-        "polish": "magazyn"
+        "polish": "magazyn",
+        "tags": []
     },
     {
         "id": "20",
@@ -177,7 +196,8 @@
             "kanji": "新聞",
             "romaji": "shi.n.bu.n"
         },
-        "polish": "gazeta"
+        "polish": "gazeta",
+        "tags": []
     },
     {
         "id": "21",
@@ -186,7 +206,8 @@
             "kanji": "-",
             "romaji": "nō.to"
         },
-        "polish": "zeszyt"
+        "polish": "zeszyt",
+        "tags": []
     },
     {
         "id": "22",
@@ -195,7 +216,8 @@
             "kanji": "手帳",
             "romaji": "te.chō"
         },
-        "polish": "organizer"
+        "polish": "organizer",
+        "tags": []
     },
     {
         "id": "23",
@@ -204,7 +226,8 @@
             "kanji": "名刺",
             "romaji": "me.i.shi"
         },
-        "polish": "wizytówka"
+        "polish": "wizytówka",
+        "tags": []
     },
     {
         "id": "24",
@@ -213,7 +236,8 @@
             "kanji": "-",
             "romaji": "kā.to"
         },
-        "polish": "karta kredytowa"
+        "polish": "karta kredytowa",
+        "tags": []
     },
     {
         "id": "25",
@@ -222,7 +246,8 @@
             "kanji": "鉛筆",
             "romaji": "e.n.pi.tsu"
         },
-        "polish": "ołówek"
+        "polish": "ołówek",
+        "tags": []
     },
     {
         "id": "26",
@@ -231,7 +256,8 @@
             "kanji": "-",
             "romaji": "bō.ru.pe.n"
         },
-        "polish": "długopis"
+        "polish": "długopis",
+        "tags": []
     },
     {
         "id": "27",
@@ -240,7 +266,8 @@
             "kanji": "-",
             "romaji": "shā.pu.pe.n.shi.ru"
         },
-        "polish": "ołówek mechaniczny"
+        "polish": "ołówek mechaniczny",
+        "tags": []
     },
     {
         "id": "28",
@@ -249,7 +276,8 @@
             "kanji": "鍵",
             "romaji": "ka.gi"
         },
-        "polish": "klucz"
+        "polish": "klucz",
+        "tags": []
     },
     {
         "id": "29",
@@ -258,7 +286,8 @@
             "kanji": "時計",
             "romaji": "to.ka.i"
         },
-        "polish": "zegarek"
+        "polish": "zegarek",
+        "tags": []
     },
     {
         "id": "30",
@@ -267,7 +296,8 @@
             "kanji": "傘",
             "romaji": "ka.sa"
         },
-        "polish": "parasol"
+        "polish": "parasol",
+        "tags": []
     },
     {
         "id": "31",
@@ -276,7 +306,8 @@
             "kanji": "-",
             "romaji": "ka.ba.n"
         },
-        "polish": "torba"
+        "polish": "torba",
+        "tags": []
     },
     {
         "id": "32",
@@ -285,7 +316,8 @@
             "kanji": "-",
             "romaji": "te.re.bi"
         },
-        "polish": "telewizja"
+        "polish": "telewizja",
+        "tags": []
     },
     {
         "id": "33",
@@ -294,7 +326,8 @@
             "kanji": "-",
             "romaji": "ra.ji.o"
         },
-        "polish": "radio"
+        "polish": "radio",
+        "tags": []
     },
     {
         "id": "34",
@@ -303,7 +336,8 @@
             "kanji": "-",
             "romaji": "ka.me.ra"
         },
-        "polish": "aparat"
+        "polish": "aparat",
+        "tags": []
     },
     {
         "id": "35",
@@ -312,7 +346,8 @@
             "kanji": "-",
             "romaji": "ko.n.pyū.tā"
         },
-        "polish": "komputer"
+        "polish": "komputer",
+        "tags": []
     },
     {
         "id": "36",
@@ -321,7 +356,8 @@
             "kanji": "机",
             "romaji": "tsu.ku.e"
         },
-        "polish": "biurko"
+        "polish": "biurko",
+        "tags": []
     },
     {
         "id": "37",
@@ -330,7 +366,8 @@
             "kanji": "-",
             "romaji": "i.su"
         },
-        "polish": "krzesło"
+        "polish": "krzesło",
+        "tags": []
     },
     {
         "id": "38",
@@ -339,7 +376,8 @@
             "kanji": "土産",
             "romaji": "mi.ya.ge"
         },
-        "polish": "prezent"
+        "polish": "prezent",
+        "tags": []
     },
     {
         "id": "39",
@@ -348,7 +386,8 @@
             "kanji": "-",
             "romaji": "ko.ko"
         },
-        "polish": "tutaj"
+        "polish": "tutaj",
+        "tags": []
     },
     {
         "id": "40",
@@ -357,7 +396,8 @@
             "kanji": "-",
             "romaji": "so.ko"
         },
-        "polish": "tam"
+        "polish": "tam",
+        "tags": []
     },
     {
         "id": "41",
@@ -366,7 +406,8 @@
             "kanji": "-",
             "romaji": "a.so.ko"
         },
-        "polish": "tamto"
+        "polish": "tamto",
+        "tags": []
     },
     {
         "id": "42",
@@ -375,7 +416,8 @@
             "kanji": "-",
             "romaji": "do.ko"
         },
-        "polish": "gdzie"
+        "polish": "gdzie",
+        "tags": []
     },
     {
         "id": "43",
@@ -384,7 +426,8 @@
             "kanji": "-",
             "romaji": "ko.chi.ra"
         },
-        "polish": "w tą stronę"
+        "polish": "w tą stronę",
+        "tags": []
     },
     {
         "id": "44",
@@ -393,7 +436,8 @@
             "kanji": "-",
             "romaji": "so.chi.ra"
         },
-        "polish": "tędy (blisko słuchacza)"
+        "polish": "tędy (blisko słuchacza)",
+        "tags": []
     },
     {
         "id": "45",
@@ -402,7 +446,8 @@
             "kanji": "-",
             "romaji": "a.chi.ra"
         },
-        "polish": "tamtędy"
+        "polish": "tamtędy",
+        "tags": []
     },
     {
         "id": "46",
@@ -411,7 +456,8 @@
             "kanji": "-",
             "romaji": "do.chi.ra"
         },
-        "polish": "którędy"
+        "polish": "którędy",
+        "tags": []
     },
     {
         "id": "47",
@@ -420,7 +466,8 @@
             "kanji": "教室",
             "romaji": "kyō.shi.tsu"
         },
-        "polish": "klasa"
+        "polish": "klasa",
+        "tags": []
     },
     {
         "id": "48",
@@ -429,7 +476,8 @@
             "kanji": "食堂",
             "romaji": "sho.ku.dō"
         },
-        "polish": "stołówka"
+        "polish": "stołówka",
+        "tags": []
     },
     {
         "id": "49",
@@ -438,7 +486,8 @@
             "kanji": "事務所",
             "romaji": "ji.mu.sho"
         },
-        "polish": "biuro"
+        "polish": "biuro",
+        "tags": []
     },
     {
         "id": "50",
@@ -447,7 +496,8 @@
             "kanji": "会議室",
             "romaji": "ka.i.gi.shi.tsu"
         },
-        "polish": "sala konferencyjna"
+        "polish": "sala konferencyjna",
+        "tags": []
     },
     {
         "id": "51",
@@ -456,7 +506,8 @@
             "kanji": "受付",
             "romaji": "u.ke.tsu.ke"
         },
-        "polish": "recepcja"
+        "polish": "recepcja",
+        "tags": []
     },
     {
         "id": "52",
@@ -465,7 +516,8 @@
             "kanji": "-",
             "romaji": "ro.bii"
         },
-        "polish": "lobby"
+        "polish": "lobby",
+        "tags": []
     },
     {
         "id": "53",
@@ -474,7 +526,8 @@
             "kanji": "部屋",
             "romaji": "he.ya"
         },
-        "polish": "pokój"
+        "polish": "pokój",
+        "tags": []
     },
     {
         "id": "54",
@@ -483,7 +536,8 @@
             "kanji": "-",
             "romaji": "to.i.re"
         },
-        "polish": "toaleta"
+        "polish": "toaleta",
+        "tags": []
     },
     {
         "id": "55",
@@ -492,7 +546,8 @@
             "kanji": "階段",
             "romaji": "ka.i.da.n"
         },
-        "polish": "schody"
+        "polish": "schody",
+        "tags": []
     },
     {
         "id": "56",
@@ -501,7 +556,8 @@
             "kanji": "-",
             "romaji": "e.re.bē.tā"
         },
-        "polish": "winda"
+        "polish": "winda",
+        "tags": []
     },
     {
         "id": "57",
@@ -510,7 +566,8 @@
             "kanji": "-",
             "romaji": "e.su.ka.rē.tā"
         },
-        "polish": "schody ruchome"
+        "polish": "schody ruchome",
+        "tags": []
     },
     {
         "id": "58",
@@ -519,7 +576,8 @@
             "kanji": "自動販売機",
             "romaji": "ji.dō.ha.n.ba.i.ki"
         },
-        "polish": "automat"
+        "polish": "automat",
+        "tags": []
     },
     {
         "id": "59",
@@ -528,7 +586,8 @@
             "kanji": "電話",
             "romaji": "de.n.wa"
         },
-        "polish": "rozmowa telefoniczna"
+        "polish": "rozmowa telefoniczna",
+        "tags": []
     },
     {
         "id": "60",
@@ -537,7 +596,8 @@
             "kanji": "国",
             "romaji": "ku.ni"
         },
-        "polish": "kraj"
+        "polish": "kraj",
+        "tags": []
     },
     {
         "id": "61",
@@ -546,7 +606,8 @@
             "kanji": "会社",
             "romaji": "ka.i.sha"
         },
-        "polish": "firma"
+        "polish": "firma",
+        "tags": []
     },
     {
         "id": "62",
@@ -555,7 +616,8 @@
             "kanji": "-",
             "romaji": "u.chi"
         },
-        "polish": "dom"
+        "polish": "dom",
+        "tags": []
     },
     {
         "id": "63",
@@ -564,7 +626,8 @@
             "kanji": "靴",
             "romaji": "ku.tsu"
         },
-        "polish": "buty"
+        "polish": "buty",
+        "tags": []
     },
     {
         "id": "64",
@@ -573,7 +636,8 @@
             "kanji": "-",
             "romaji": "ne.ku.ta.i"
         },
-        "polish": "krawat"
+        "polish": "krawat",
+        "tags": []
     },
     {
         "id": "65",
@@ -582,7 +646,8 @@
             "kanji": "-",
             "romaji": "wa.i.n"
         },
-        "polish": "wino"
+        "polish": "wino",
+        "tags": []
     },
     {
         "id": "66",
@@ -591,7 +656,8 @@
             "kanji": "売り場",
             "romaji": "u.ri.ba"
         },
-        "polish": "dział"
+        "polish": "dział",
+        "tags": []
     },
     {
         "id": "67",
@@ -600,7 +666,8 @@
             "kanji": "地下",
             "romaji": "chi.ka"
         },
-        "polish": "piwnica"
+        "polish": "piwnica",
+        "tags": []
     },
     {
         "id": "68",
@@ -609,7 +676,8 @@
             "kanji": "-階",
             "romaji": "- ka.i"
         },
-        "polish": "n-te piętro"
+        "polish": "n-te piętro",
+        "tags": []
     },
     {
         "id": "69",
@@ -618,7 +686,8 @@
             "kanji": "何階",
             "romaji": "na.n.ga.i"
         },
-        "polish": "które piętro"
+        "polish": "które piętro",
+        "tags": []
     },
     {
         "id": "70",
@@ -627,7 +696,8 @@
             "kanji": "-円",
             "romaji": "- e.n"
         },
-        "polish": "- yen"
+        "polish": "- yen",
+        "tags": []
     },
     {
         "id": "71",
@@ -636,7 +706,8 @@
             "kanji": "-",
             "romaji": "i.ku.ra"
         },
-        "polish": "jak dużo"
+        "polish": "jak dużo",
+        "tags": []
     },
     {
         "id": "72",
@@ -645,7 +716,8 @@
             "kanji": "百",
             "romaji": "hya.ku"
         },
-        "polish": "sto"
+        "polish": "sto",
+        "tags": []
     },
     {
         "id": "73",
@@ -654,7 +726,8 @@
             "kanji": "千",
             "romaji": "se.n"
         },
-        "polish": "tysiąc"
+        "polish": "tysiąc",
+        "tags": []
     },
     {
         "id": "74",
@@ -663,7 +736,8 @@
             "kanji": "万",
             "romaji": "ma.n"
         },
-        "polish": "dziesięć tysięcy"
+        "polish": "dziesięć tysięcy",
+        "tags": []
     },
     {
         "id": "75",
@@ -672,7 +746,8 @@
             "kanji": "-",
             "romaji": "su.mi.ma.se.n"
         },
-        "polish": "przepraszam"
+        "polish": "przepraszam",
+        "tags": []
     },
     {
         "id": "76",
@@ -681,7 +756,8 @@
             "kanji": "-",
             "romaji": "dō.mo"
         },
-        "polish": "dziękuję"
+        "polish": "dziękuję",
+        "tags": []
     },
     {
         "id": "77",
@@ -690,7 +766,8 @@
             "kanji": "食べます",
             "romaji": "ta.be.ma.su"
         },
-        "polish": "jeść"
+        "polish": "jeść",
+        "tags": []
     },
     {
         "id": "78",
@@ -699,7 +776,8 @@
             "kanji": "飲みます",
             "romaji": "no.mi.ma.su"
         },
-        "polish": "pić"
+        "polish": "pić",
+        "tags": []
     },
     {
         "id": "79",
@@ -708,7 +786,8 @@
             "kanji": "吸います",
             "romaji": "su.i.ma.su"
         },
-        "polish": "palić"
+        "polish": "palić",
+        "tags": []
     },
     {
         "id": "80",
@@ -717,7 +796,8 @@
             "kanji": "見ます",
             "romaji": "mi.ma.su"
         },
-        "polish": "patrzeć/ oglądać"
+        "polish": "patrzeć/ oglądać",
+        "tags": []
     },
     {
         "id": "81",
@@ -726,7 +806,8 @@
             "kanji": "聞きます",
             "romaji": "ki.ki.ma.su"
         },
-        "polish": "słuchać"
+        "polish": "słuchać",
+        "tags": []
     },
     {
         "id": "82",
@@ -735,7 +816,8 @@
             "kanji": "読みます",
             "romaji": "yo.mi.ma.su"
         },
-        "polish": "czytać"
+        "polish": "czytać",
+        "tags": []
     },
     {
         "id": "83",
@@ -744,7 +826,8 @@
             "kanji": "",
             "romaji": "ka.ki.ma.su"
         },
-        "polish": "pisać"
+        "polish": "pisać",
+        "tags": []
     },
     {
         "id": "84",
@@ -753,7 +836,8 @@
             "kanji": "",
             "romaji": "ka.i.ma.su"
         },
-        "polish": "kupować"
+        "polish": "kupować",
+        "tags": []
     },
     {
         "id": "85",
@@ -762,7 +846,8 @@
             "kanji": "",
             "romaji": "to.ri.ma.su"
         },
-        "polish": "robić (zdjęcie)"
+        "polish": "robić (zdjęcie)",
+        "tags": []
     },
     {
         "id": "86",
@@ -771,7 +856,8 @@
             "kanji": "",
             "romaji": "shi.ma.su"
         },
-        "polish": "robić/ grać"
+        "polish": "robić/ grać",
+        "tags": []
     },
     {
         "id": "87",
@@ -780,7 +866,8 @@
             "kanji": "",
             "romaji": "a.i.ma.su"
         },
-        "polish": "spotykać"
+        "polish": "spotykać",
+        "tags": []
     },
     {
         "id": "88",
@@ -789,7 +876,8 @@
             "kanji": "",
             "romaji": "go.ha.n"
         },
-        "polish": "posiłek/ gotowany ryż"
+        "polish": "posiłek/ gotowany ryż",
+        "tags": []
     },
     {
         "id": "89",
@@ -798,7 +886,8 @@
             "kanji": "",
             "romaji": "a.sa.go.ha.n"
         },
-        "polish": "śniadanie"
+        "polish": "śniadanie",
+        "tags": []
     },
     {
         "id": "90",
@@ -807,7 +896,8 @@
             "kanji": "",
             "romaji": "hi.ru.go.ha.n"
         },
-        "polish": "obiad/lunch"
+        "polish": "obiad/lunch",
+        "tags": []
     },
     {
         "id": "91",
@@ -816,7 +906,8 @@
             "kanji": "",
             "romaji": "ba.n.go.ha.n"
         },
-        "polish": "kolacja"
+        "polish": "kolacja",
+        "tags": []
     },
     {
         "id": "92",
@@ -825,7 +916,8 @@
             "kanji": "",
             "romaji": "pa.n"
         },
-        "polish": "chleb"
+        "polish": "chleb",
+        "tags": []
     },
     {
         "id": "93",
@@ -834,7 +926,8 @@
             "kanji": "卵",
             "romaji": "ta.ma.go"
         },
-        "polish": "jajko"
+        "polish": "jajko",
+        "tags": []
     },
     {
         "id": "94",
@@ -843,7 +936,8 @@
             "kanji": "",
             "romaji": "ni.ku"
         },
-        "polish": "mięso"
+        "polish": "mięso",
+        "tags": []
     },
     {
         "id": "95",
@@ -852,7 +946,8 @@
             "kanji": "",
             "romaji": "su.ka.ne"
         },
-        "polish": "ryba"
+        "polish": "ryba",
+        "tags": []
     },
     {
         "id": "96",
@@ -861,7 +956,8 @@
             "kanji": "",
             "romaji": "ya.sa.i"
         },
-        "polish": "warzywo"
+        "polish": "warzywo",
+        "tags": []
     },
     {
         "id": "97",
@@ -870,7 +966,8 @@
             "kanji": "",
             "romaji": "ku.da.mo.no"
         },
-        "polish": "owoc"
+        "polish": "owoc",
+        "tags": []
     },
     {
         "id": "98",
@@ -879,7 +976,8 @@
             "kanji": "",
             "romaji": "mi.zu"
         },
-        "polish": "woda"
+        "polish": "woda",
+        "tags": []
     },
     {
         "id": "99",
@@ -888,7 +986,8 @@
             "kanji": "",
             "romaji": "o.cha"
         },
-        "polish": "zielona herbata"
+        "polish": "zielona herbata",
+        "tags": []
     },
     {
         "id": "100",
@@ -897,7 +996,8 @@
             "kanji": "",
             "romaji": "kō.cha"
         },
-        "polish": "czarna herbata"
+        "polish": "czarna herbata",
+        "tags": []
     },
     {
         "id": "101",
@@ -906,7 +1006,8 @@
             "kanji": "",
             "romaji": "gyu.u.nyu.u"
         },
-        "polish": "mleko"
+        "polish": "mleko",
+        "tags": []
     },
     {
         "id": "102",
@@ -915,7 +1016,8 @@
             "kanji": "",
             "romaji": "ju.i.su"
         },
-        "polish": "sok"
+        "polish": "sok",
+        "tags": []
     },
     {
         "id": "103",
@@ -924,7 +1026,8 @@
             "kanji": "",
             "romaji": "bi.i.ru"
         },
-        "polish": "piwo"
+        "polish": "piwo",
+        "tags": []
     },
     {
         "id": "104",
@@ -933,7 +1036,8 @@
             "kanji": "",
             "romaji": "o.sa.ke"
         },
-        "polish": "alkohol"
+        "polish": "alkohol",
+        "tags": []
     },
     {
         "id": "105",
@@ -942,7 +1046,8 @@
             "kanji": "",
             "romaji": "ta.ba.ko"
         },
-        "polish": "papierosy"
+        "polish": "papierosy",
+        "tags": []
     },
     {
         "id": "106",
@@ -951,7 +1056,8 @@
             "kanji": "",
             "romaji": "te.ga.mi"
         },
-        "polish": "list"
+        "polish": "list",
+        "tags": []
     },
     {
         "id": "107",
@@ -960,7 +1066,8 @@
             "kanji": "",
             "romaji": "re.po.to"
         },
-        "polish": "raport"
+        "polish": "raport",
+        "tags": []
     },
     {
         "id": "108",
@@ -969,7 +1076,8 @@
             "kanji": "",
             "romaji": "sha.shi.n"
         },
-        "polish": "fotografia"
+        "polish": "fotografia",
+        "tags": []
     },
     {
         "id": "109",
@@ -978,7 +1086,8 @@
             "kanji": "",
             "romaji": "bi.de.o"
         },
-        "polish": "video"
+        "polish": "video",
+        "tags": []
     },
     {
         "id": "110",
@@ -987,7 +1096,8 @@
             "kanji": "",
             "romaji": "mi.se"
         },
-        "polish": "sklep"
+        "polish": "sklep",
+        "tags": []
     },
     {
         "id": "111",
@@ -996,7 +1106,8 @@
             "kanji": "",
             "romaji": "ni.wa"
         },
-        "polish": "ogród"
+        "polish": "ogród",
+        "tags": []
     },
     {
         "id": "112",
@@ -1005,7 +1116,8 @@
             "kanji": "",
             "romaji": "sha.ku.da.i"
         },
-        "polish": "praca domowa"
+        "polish": "praca domowa",
+        "tags": []
     },
     {
         "id": "113",
@@ -1014,7 +1126,8 @@
             "kanji": "",
             "romaji": "te.ni.su"
         },
-        "polish": "tenis"
+        "polish": "tenis",
+        "tags": []
     },
     {
         "id": "114",
@@ -1023,7 +1136,8 @@
             "kanji": "",
             "romaji": "sa.kkā"
         },
-        "polish": "piłka nożna"
+        "polish": "piłka nożna",
+        "tags": []
     },
     {
         "id": "115",
@@ -1032,7 +1146,8 @@
             "kanji": "",
             "romaji": "o.ha.na.mi"
         },
-        "polish": "oglądanie wiśni"
+        "polish": "oglądanie wiśni",
+        "tags": []
     },
     {
         "id": "116",
@@ -1041,7 +1156,8 @@
             "kanji": "",
             "romaji": "na.ni"
         },
-        "polish": "co"
+        "polish": "co",
+        "tags": []
     },
     {
         "id": "117",
@@ -1050,7 +1166,8 @@
             "kanji": "",
             "romaji": "i.ssho.ni"
         },
-        "polish": "razem"
+        "polish": "razem",
+        "tags": []
     },
     {
         "id": "118",
@@ -1059,7 +1176,8 @@
             "kanji": "",
             "romaji": "cho.tto"
         },
-        "polish": "trochę"
+        "polish": "trochę",
+        "tags": []
     },
     {
         "id": "119",
@@ -1068,7 +1186,8 @@
             "kanji": "",
             "romaji": "i.tsu.mo"
         },
-        "polish": "zawsze / zazwyczaj"
+        "polish": "zawsze / zazwyczaj",
+        "tags": []
     },
     {
         "id": "120",
@@ -1077,7 +1196,8 @@
             "kanji": "",
             "romaji": "to.ki.do.ki"
         },
-        "polish": "czasem"
+        "polish": "czasem",
+        "tags": []
     },
     {
         "id": "121",
@@ -1086,7 +1206,8 @@
             "kanji": "",
             "romaji": "so.re.ka.ra"
         },
-        "polish": "później"
+        "polish": "później",
+        "tags": []
     },
     {
         "id": "122",
@@ -1095,7 +1216,8 @@
             "kanji": "",
             "romaji": "i.i.de.su.ne"
         },
-        "polish": "To dobrze"
+        "polish": "To dobrze",
+        "tags": []
     },
     {
         "id": "123",
@@ -1104,7 +1226,8 @@
             "kanji": "",
             "romaji": "wa.ka.ri.ma.shi.ta"
         },
-        "polish": "Rozumiem"
+        "polish": "Rozumiem",
+        "tags": []
     },
     {
         "id": "124",
@@ -1113,7 +1236,8 @@
             "kanji": "",
             "romaji": "na.n.de.su.ka"
         },
-        "polish": "Tak?"
+        "polish": "Tak?",
+        "tags": []
     },
     {
         "id": "125",
@@ -1122,7 +1246,8 @@
             "kanji": "",
             "romaji": "ja"
         },
-        "polish": "Do zobaczenia jutro"
+        "polish": "Do zobaczenia jutro",
+        "tags": []
     },
     {
         "id": "126",
@@ -1131,7 +1256,8 @@
             "kanji": "",
             "romaji": "Ha.n.sa.mu"
         },
-        "polish": "przystojny"
+        "polish": "przystojny",
+        "tags": []
     },
     {
         "id": "127",
@@ -1140,7 +1266,8 @@
             "kanji": "綺麗",
             "romaji": "ki.re.i"
         },
-        "polish": "piękny / czysty"
+        "polish": "piękny / czysty",
+        "tags": []
     },
     {
         "id": "128",
@@ -1149,7 +1276,8 @@
             "kanji": "静か",
             "romaji": "shi.zu.ka"
         },
-        "polish": "cichy"
+        "polish": "cichy",
+        "tags": []
     },
     {
         "id": "129",
@@ -1158,7 +1286,8 @@
             "kanji": "賑やか",
             "romaji": "ni.gi.ja.ka"
         },
-        "polish": "pełen życia, gwarny"
+        "polish": "pełen życia, gwarny",
+        "tags": []
     },
     {
         "id": "130",
@@ -1167,7 +1296,8 @@
             "kanji": "親切",
             "romaji": "shi.n.se.tsu"
         },
-        "polish": "pomocny / uprzejmy"
+        "polish": "pomocny / uprzejmy",
+        "tags": []
     },
     {
         "id": "131",
@@ -1176,7 +1306,8 @@
             "kanji": "暇",
             "romaji": "hi.ma"
         },
-        "polish": "wolny (czas)"
+        "polish": "wolny (czas)",
+        "tags": []
     },
     {
         "id": "132",
@@ -1185,7 +1316,8 @@
             "kanji": "元気",
             "romaji": "ge.n.ki"
         },
-        "polish": "zdrowy / energiczny"
+        "polish": "zdrowy / energiczny",
+        "tags": []
     },
     {
         "id": "133",
@@ -1194,7 +1326,8 @@
             "kanji": "便利",
             "romaji": "be.n.ri"
         },
-        "polish": "wygodny"
+        "polish": "wygodny",
+        "tags": []
     },
     {
         "id": "134",
@@ -1203,7 +1336,8 @@
             "kanji": "素敵",
             "romaji": "su.te.ki"
         },
-        "polish": "fajnie / miło"
+        "polish": "fajnie / miło",
+        "tags": []
     },
     {
         "id": "135",
@@ -1212,7 +1346,8 @@
             "kanji": "大き",
             "romaji": "o.o.ki"
         },
-        "polish": "duży"
+        "polish": "duży",
+        "tags": []
     },
     {
         "id": "136",
@@ -1221,7 +1356,8 @@
             "kanji": "小さい",
             "romaji": "chi.i.sa.i"
         },
-        "polish": "mały"
+        "polish": "mały",
+        "tags": []
     },
     {
         "id": "137",
@@ -1230,7 +1366,8 @@
             "kanji": "新しい",
             "romaji": "a.ta.ra.shi.i"
         },
-        "polish": "nowy/ świeży"
+        "polish": "nowy/ świeży",
+        "tags": []
     },
     {
         "id": "138",
@@ -1239,7 +1376,8 @@
             "kanji": "古い",
             "romaji": "fu.ru.i"
         },
-        "polish": "stary (obiekt)"
+        "polish": "stary (obiekt)",
+        "tags": []
     },
     {
         "id": "139",
@@ -1248,7 +1386,8 @@
             "kanji": "良い",
             "romaji": "i.i"
         },
-        "polish": "dobry"
+        "polish": "dobry",
+        "tags": []
     },
     {
         "id": "140",
@@ -1257,7 +1396,8 @@
             "kanji": "悪い",
             "romaji": "wa.ru.i"
         },
-        "polish": "zły"
+        "polish": "zły",
+        "tags": []
     },
     {
         "id": "141",
@@ -1266,7 +1406,8 @@
             "kanji": "暑い",
             "romaji": "a.tsu.i"
         },
-        "polish": "gorący"
+        "polish": "gorący",
+        "tags": []
     },
     {
         "id": "142",
@@ -1275,7 +1416,8 @@
             "kanji": "寒い",
             "romaji": "sa.mu.i"
         },
-        "polish": "zimny (temperatura)"
+        "polish": "zimny (temperatura)",
+        "tags": []
     },
     {
         "id": "142",
@@ -1284,7 +1426,8 @@
             "kanji": "冷たい",
             "romaji": "tsu.me.ta.i."
         },
-        "polish": "zimy (dotyk)"
+        "polish": "zimy (dotyk)",
+        "tags": []
     },
     {
         "id": "143",
@@ -1293,7 +1436,8 @@
             "kanji": "難しい",
             "romaji": "mu.zu.ka.shi.i."
         },
-        "polish": "trudny"
+        "polish": "trudny",
+        "tags": []
     },
     {
         "id": "144",
@@ -1302,7 +1446,8 @@
             "kanji": "易しい",
             "romaji": "ya.sa.shi.i"
         },
-        "polish": "łatwy"
+        "polish": "łatwy",
+        "tags": []
     },
     {
         "id": "145",
@@ -1311,7 +1456,8 @@
             "kanji": "高い",
             "romaji": "ta.ka.i"
         },
-        "polish": "drogi,wysoki"
+        "polish": "drogi,wysoki",
+        "tags": []
     },
     {
         "id": "146",
@@ -1320,7 +1466,8 @@
             "kanji": "安い",
             "romaji": "ja.sa.i"
         },
-        "polish": "tani"
+        "polish": "tani",
+        "tags": []
     },
     {
         "id": "147",
@@ -1329,7 +1476,8 @@
             "kanji": "面白い",
             "romaji": "o.mo.shi.ro.i"
         },
-        "polish": "interesujący"
+        "polish": "interesujący",
+        "tags": []
     },
     {
         "id": "148",
@@ -1338,7 +1486,8 @@
             "kanji": "美味しい",
             "romaji": "o.i.shi.i"
         },
-        "polish": "smaczny"
+        "polish": "smaczny",
+        "tags": []
     },
     {
         "id": "149",
@@ -1347,7 +1496,8 @@
             "kanji": "忙しい",
             "romaji": "i.zu.ga.shi.i"
         },
-        "polish": "zajęty"
+        "polish": "zajęty",
+        "tags": []
     },
     {
         "id": "150",
@@ -1356,7 +1506,8 @@
             "kanji": "楽しい",
             "romaji": "ta.no.shi.i"
         },
-        "polish": "przyjemny"
+        "polish": "przyjemny",
+        "tags": []
     },
     {
         "id": "151",
@@ -1365,7 +1516,8 @@
             "kanji": "白い",
             "romaji": "shi.ro.i"
         },
-        "polish": "biały"
+        "polish": "biały",
+        "tags": []
     },
     {
         "id": "152",
@@ -1374,7 +1526,8 @@
             "kanji": "黒い",
             "romaji": "ku.ro.i"
         },
-        "polish": "czarny"
+        "polish": "czarny",
+        "tags": []
     },
     {
         "id": "153",
@@ -1383,7 +1536,8 @@
             "kanji": "赤い",
             "romaji": "a.ka.i"
         },
-        "polish": "red"
+        "polish": "red",
+        "tags": []
     },
     {
         "id": "154",
@@ -1392,7 +1546,8 @@
             "kanji": "青い",
             "romaji": "a.o.i"
         },
-        "polish": "niebieeski"
+        "polish": "niebieeski",
+        "tags": []
     },
     {
         "id": "155",
@@ -1401,7 +1556,8 @@
             "kanji": "桜",
             "romaji": "sa.ku.ra"
         },
-        "polish": "kwiat wiśni"
+        "polish": "kwiat wiśni",
+        "tags": []
     },
     {
         "id": "156",
@@ -1410,7 +1566,8 @@
             "kanji": "山",
             "romaji": "ya.ma"
         },
-        "polish": "góra"
+        "polish": "góra",
+        "tags": []
     },
     {
         "id": "157",
@@ -1419,7 +1576,8 @@
             "kanji": "町",
             "romaji": "ma.chi"
         },
-        "polish": "małe miasto"
+        "polish": "małe miasto",
+        "tags": []
     },
     {
         "id": "158",
@@ -1428,7 +1586,8 @@
             "kanji": "食べ物",
             "romaji": "ta.be.mo.no"
         },
-        "polish": "jedzenie"
+        "polish": "jedzenie",
+        "tags": []
     },
     {
         "id": "159",
@@ -1437,7 +1596,8 @@
             "kanji": "所",
             "romaji": "to.ko.ro"
         },
-        "polish": "miejsce"
+        "polish": "miejsce",
+        "tags": []
     },
     {
         "id": "160",
@@ -1446,7 +1606,8 @@
             "kanji": "寮",
             "romaji": "ri.yo.o"
         },
-        "polish": "hostel/ akademik"
+        "polish": "hostel/ akademik",
+        "tags": []
     },
     {
         "id": "161",
@@ -1455,7 +1616,8 @@
             "kanji": "",
             "romaji": "re.su.to.ran"
         },
-        "polish": "restauracja"
+        "polish": "restauracja",
+        "tags": []
     },
     {
         "id": "162",
@@ -1464,7 +1626,8 @@
             "kanji": "生活",
             "romaji": "sei.ka.tsu"
         },
-        "polish": "życie"
+        "polish": "życie",
+        "tags": []
     },
     {
         "id": "163",
@@ -1473,7 +1636,8 @@
             "kanji": "[お]仕事",
             "romaji": "shi.go.to"
         },
-        "polish": "praca/ biznes"
+        "polish": "praca/ biznes",
+        "tags": []
     },
     {
         "id": "164",
@@ -1482,7 +1646,8 @@
             "kanji": "如何",
             "romaji": "do.o"
         },
-        "polish": "jak?"
+        "polish": "jak?",
+        "tags": []
     },
     {
         "id": "165",
@@ -1491,7 +1656,8 @@
             "kanji": "",
             "romaji": "do.n.na"
         },
-        "polish": "jakiego rodzaju?"
+        "polish": "jakiego rodzaju?",
+        "tags": []
     },
     {
         "id": "166",
@@ -1500,7 +1666,8 @@
             "kanji": "迚も",
             "romaji": "to.te.mo"
         },
-        "polish": "bardzo"
+        "polish": "bardzo",
+        "tags": []
     },
     {
         "id": "167",
@@ -1509,7 +1676,8 @@
             "kanji": "余り",
             "romaji": "a.ma.ri"
         },
-        "polish": "bynajmniej"
+        "polish": "bynajmniej",
+        "tags": []
     },
     {
         "id": "168",
@@ -1518,6 +1686,7 @@
             "kanji": "而して",
             "romaji": "so.shi.te"
         },
-        "polish": "i (do łączenia zdań)"
+        "polish": "i (do łączenia zdań)",
+        "tags": []
     }
 ]

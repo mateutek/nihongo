@@ -23,7 +23,8 @@ async function importQuestions() {
         }
         data.forEach(async (q) => {
             const id = uuidv5(q.id, MY_NAMESPACE);
-            const newData = { ...q, id };
+            const tags = q.tags.split("||");
+            const newData = { ...q, id, tags };
             console.log(`${id} == ${q.polish}`);
             const qRef = db.collection("flashcards").doc(id);
             await qRef.set({ ...newData }, { merge: true });
