@@ -44,7 +44,7 @@ export default function Settings() {
     };
 
     return (
-        <Grid container spacing={3} justifyContent="center" alignItems="center">
+        <Grid container spacing={3} justifyContent="center" alignItems="flex-start">
             <Grid item xs={12} lg={6}>
                 <Paper
                     sx={{
@@ -54,7 +54,7 @@ export default function Settings() {
                     }}
                 >
                     <Typography component="h2" variant="h6" color="primary" gutterBottom>
-                        Settings
+                        Ustawienia
                     </Typography>
                     <FormGroup>
                         <FormControlLabel
@@ -72,6 +72,16 @@ export default function Settings() {
                                 />
                             }
                             label="Kanji jako domyślny tekst"
+                        />
+                        <FormControlLabel
+                            control={
+                                <Switch
+                                    checked={userSettings.defaultInput}
+                                    onChange={handleChange}
+                                    name="defaultInput"
+                                />
+                            }
+                            label="Trudniejsze pytania"
                         />
                         <TextField
                             sx={{ marginTop: 1 }}
@@ -91,6 +101,19 @@ export default function Settings() {
                             }}
                         />
                     </FormGroup>
+                </Paper>
+            </Grid>
+            <Grid item xs={12} lg={6}>
+                <Paper
+                    sx={{
+                        p: 2,
+                        display: 'flex',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <Typography component="h2" variant="h6" color="primary" gutterBottom>
+                        Inne
+                    </Typography>
                     <Button variant="outlined" onClick={handleClickOpen} sx={{ mt: 2 }}>
                         Odśwież dane
                     </Button>

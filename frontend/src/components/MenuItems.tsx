@@ -6,6 +6,7 @@ import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import QuizIcon from '@mui/icons-material/Quiz';
+import HistoryIcon from '@mui/icons-material/History';
 import ListItemLink from './ListItemLink';
 
 type MenuItemsProps = {};
@@ -15,6 +16,12 @@ export const MenuItems: FunctionComponent<MenuItemsProps> = () => {
         <React.Fragment>
             <ListItemLink to="/" primary="Dashboard" icon={<DashboardIcon />} />
             <ListItemLink to="/quiz-select" secondaryMatch="/quiz" primary="Quiz" icon={<QuizIcon />} />
+            <ListItemLink
+                to="/quiz-history"
+                secondaryMatch="/quiz-history/:id"
+                primary="Poprzednie Quizy"
+                icon={<HistoryIcon />}
+            />
             <ListItemLink to="/lessons" primary="Lekcje" icon={<ClassIcon />} />
             <ListItemLink to="/grammar" primary="Gramatyka" icon={<TranslateIcon />} />
             <ListItemLink to="/dictionary" primary="Słownik" icon={<MenuBookIcon />} />

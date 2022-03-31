@@ -12,6 +12,21 @@ export type SingleDataDao = {
     tags: string[];
 };
 
+export type QuizHistoryItem = {
+    question: SingleDataDao;
+    owner: string;
+    tries: number;
+    time: number;
+    score: number;
+    skipped: boolean;
+    userInput: string[];
+    answers: {
+        text: string;
+        isCorrect: boolean;
+        clicked: boolean;
+    }[];
+};
+
 export type DataDao = Array<SingleDataDao>;
 
 const questionsData: DataDao = data;

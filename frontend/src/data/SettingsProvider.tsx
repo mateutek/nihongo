@@ -7,6 +7,7 @@ export type Settings = {
     showRomaji: boolean;
     kanjiPriority: boolean;
     startingQuestions: number;
+    defaultInput: boolean;
 };
 
 interface SettingsContextType {
@@ -18,6 +19,7 @@ const defaultSettings: Settings = {
     kanjiPriority: false,
     showRomaji: true,
     startingQuestions: 40,
+    defaultInput: false,
 };
 
 let SettingsContext = React.createContext<SettingsContextType>(null!);

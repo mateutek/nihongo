@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid';
 import React, { useState } from 'react';
 import { Typography } from '@mui/material';
-import { DataGrid, GridColDef, GridRenderCellParams, GridToolbar, GridValueGetterParams } from '@mui/x-data-grid';
+import { DataGrid, GridColDef, GridRenderCellParams, GridToolbar, GridValueGetterParams, plPL } from '@mui/x-data-grid';
 import LS from '../data/lowdb';
 import Link from '@mui/material/Link';
 
@@ -67,6 +67,7 @@ export default function Dictionary() {
                     <div style={{ display: 'flex', height: '100%' }}>
                         <div style={{ flexGrow: 1 }}>
                             <DataGrid
+                                localeText={plPL.components.MuiDataGrid.defaultProps.localeText}
                                 rows={data}
                                 columns={columns}
                                 pageSize={pageSize}

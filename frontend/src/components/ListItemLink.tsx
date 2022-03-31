@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link as RouterLink, LinkProps as RouterLinkProps, useLocation } from 'react-router-dom';
+import { Link as RouterLink, LinkProps as RouterLinkProps, useLocation, useMatch } from 'react-router-dom';
 
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -16,9 +16,10 @@ function ListItemLink(props: ListItemLinkProps) {
     const { icon, primary, to, secondaryMatch } = props;
     const location = useLocation();
     const [isSelected, setIsSelected] = useState(false);
+    const match = useMatch(secondaryMatch ? secondaryMatch : '');
     React.useEffect(() => {
-        setIsSelected(location.pathname === to || location.pathname === secondaryMatch);
-    }, [location, to, secondaryMatch]);
+        setIsSelected(location.pathname === to || (location.pathname !== '/' && !!match));
+    }, [location, to, match]);
 
     const renderLink = React.useMemo(
         () =>
@@ -31,7 +32,9 @@ function ListItemLink(props: ListItemLinkProps) {
     return (
         <li>
             <ListItem button component={renderLink} selected={isSelected}>
-                {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
+                {icon ? (
+                    <ListItemIcon sx={{ color: isSelected ? 'secondary.main' : 'text.main' }}>{icon}</ListItemIcon>
+                ) : null}
                 <ListItemText primary={primary} />
             </ListItem>
         </li>

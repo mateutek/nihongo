@@ -22,6 +22,8 @@ export type RandomData = {
     answers: AnswersList;
     tries: number;
     time: number;
+    skipped: boolean;
+    userInput: string[];
 };
 
 interface DataContextType {
@@ -54,7 +56,6 @@ export function buildTags(flashcards: DataDao): Array<string> {
         f.tags.forEach((t) => {
             set.add(t);
         });
-        console.log(set);
         return set;
     }, new Set<string>());
 
@@ -71,7 +72,6 @@ async function loadFlashcards() {
 }
 
 function drawRandomFlashcards(flashcards: Flashcard[], numberOfQuestions: number): RandomData[] {
-    console.log(flashcards);
     const pickedFlashcards = _.sampleSize(flashcards, numberOfQuestions);
     return pickedFlashcards.map((flashcard) => {
         const questionNumber = _.random(0, 3);
@@ -83,7 +83,7 @@ function drawRandomFlashcards(flashcards: Flashcard[], numberOfQuestions: number
             clicked: false,
             isCorrect: isCorrect(randomData[questionNumber], selectedAnswer),
         }));
-        return { question: randomData[questionNumber], answers, tries: 0, time: 0 };
+        return { question: randomData[questionNumber], answers, tries: 0, time: 0, skipped: false, userInput: [] };
     });
 }
 

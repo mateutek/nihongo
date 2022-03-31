@@ -40,7 +40,12 @@ export default function Quiz() {
         }
     }, [pickedFlashcards, currentQuestion, navigate]);
 
-    function pickNextQuestion() {
+    function pickNextQuestion(skipped?: boolean) {
+        pickedFlashcards[currentQuestion].answers = answers;
+        if (skipped) {
+            pickedFlashcards[currentQuestion].skipped = true;
+            pickedFlashcards[currentQuestion].time = timeTaken;
+        }
         setTimeout(() => {
             const nextQuestionNumber = currentQuestion + 1;
             if (nextQuestionNumber < pickedFlashcards.length) {
@@ -70,6 +75,18 @@ export default function Quiz() {
         }
     }
 
+    function checkInputAnswer(score: number, answer: string) {
+        pickedFlashcards[currentQuestion].userInput.push(answer);
+        if (pickedFlashcards[currentQuestion].tries <= 3) {
+            pickedFlashcards[currentQuestion].tries += 1;
+        }
+        if (score >= 0.7) {
+            setCardActive(false);
+            pickedFlashcards[currentQuestion].time = timeTaken;
+            pickNextQuestion();
+        }
+    }
+
     function getTime(seconds: number) {
         setTimeTaken(seconds);
     }
@@ -88,7 +105,14 @@ export default function Quiz() {
                 <Grid item>
                     <FlashcardItem data={flashcardData} />
                 </Grid>
-                <Answers answersList={answers} onClick={checkAnswer} onSkip={pickNextQuestion} />
+                {answers.length > 0 && (
+                    <Answers
+                        answersList={answers}
+                        onClick={checkAnswer}
+                        onSkip={pickNextQuestion}
+                        onInput={checkInputAnswer}
+                    />
+                )}
             </Grid>
             <Portal container={fabContainerRef.current}>
                 <Zoom in timeout={transitionDuration} unmountOnExit>

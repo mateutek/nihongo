@@ -3,50 +3,41 @@ import React, { useEffect, useState } from 'react';
 import { useData } from '../data/DataProvider';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import dayjs from 'dayjs';
-import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import { renderRomaji } from '../helpers/helpers';
+import { totalColor } from '../helpers/helpers';
 import _ from 'lodash';
-import { Chip, Fab, Portal, Tooltip, useTheme, Zoom } from '@mui/material';
+import {
+    Button,
+    Chip,
+    Fab,
+    FormControl,
+    InputLabel,
+    MenuItem,
+    Portal,
+    Select,
+    SelectChangeEvent,
+    Tooltip,
+    useTheme,
+    Zoom,
+} from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useLayout } from '../data/LayoutProvider';
-
-function questionColor(total: number) {
-    switch (total) {
-        case 1:
-        case 2:
-            return 'success.main';
-        case 3:
-            return 'warning.main';
-        case 4:
-            return 'error.main';
-        default:
-            return 'info.main';
-    }
-}
-
-type totalColors = 'error' | 'info' | 'success' | 'warning' | 'primary';
-
-function totalColor(total: number) {
-    let color: totalColors;
-    if (total >= 0.3) {
-        color = 'warning';
-    } else if (total >= 0.5) {
-        color = 'info';
-    } else if (total >= 0.8) {
-        color = 'success';
-    } else {
-        color = 'primary';
-    }
-    return color;
-}
+import { useSnackbar } from 'notistack';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { db } from '../services/firebase';
+import { useAuth } from '../services/AuthContext';
+import { QuizAnswer } from '../components/QuizAnswer';
 
 export default function QuizEnd() {
     const navigate = useNavigate();
     const { pickedFlashcards } = useData();
-    const [total, setTotal] = useState({ score: 0, time: 0, totalPercentage: 0 });
-    const { fabContainerRef } = useLayout();
+    const [filteredFlashcards, setFilteredFlashcards] = useState(() => pickedFlashcards);
+    const [total, setTotal] = useState({ score: 0, time: 0, totalPercentage: 0, maxScore: 0 });
+    const [sorting, setSorting] = useState('');
+    const { fabContainerRef, setIsLoading } = useLayout();
+    const { user } = useAuth();
+
+    const { enqueueSnackbar } = useSnackbar();
 
     const theme = useTheme();
 
@@ -55,22 +46,97 @@ export default function QuizEnd() {
         exit: theme.transitions.duration.leavingScreen,
     };
 
+    const handleChange = (event: SelectChangeEvent) => {
+        setSorting(event.target.value);
+    };
+
     useEffect(() => {
+        setIsLoading(true);
+        // const data: Array<any[]> = [['time_asc', 'time_desc', 'tries_asc', 'tries_desc']];
+        const newData = [...pickedFlashcards].sort((a, b) => {
+            // data.push([b.time - a.time, a.time - b.time, b.tries - a.tries, a.tries - b.tries]);
+            switch (sorting) {
+                case '-':
+                default:
+                    return 0;
+                case 'time_asc':
+                    return a.time - b.time;
+                case 'time_desc':
+                    return b.time - a.time;
+                case 'tries_asc':
+                    return a.tries - b.tries;
+                case 'tries_desc':
+                    return b.tries - a.tries;
+            }
+        });
+
+        setFilteredFlashcards(newData);
+        setIsLoading(false);
+    }, [sorting, pickedFlashcards, setIsLoading]);
+
+    useEffect(() => {
+        setIsLoading(true);
         if (pickedFlashcards.length === 0) {
             navigate('/quiz-select');
         } else {
+            const maxScore = pickedFlashcards.length * 4 - pickedFlashcards.length;
             const newTotal = pickedFlashcards.reduce(
-                (total, currentValue) => {
-                    total.time += currentValue.time;
-                    total.score += currentValue.tries;
+                (total, question) => {
+                    const tries = question.skipped ? 3 : question.tries - 1;
+                    total.time += question.time;
+                    total.score -= tries;
                     return total;
                 },
-                { score: 0, time: 0, totalPercentage: 0 },
+                { score: maxScore, time: 0, totalPercentage: 0, maxScore },
             );
-            newTotal.totalPercentage = _.round(pickedFlashcards.length / newTotal.score, 2) * 100;
+            newTotal.totalPercentage = _.round((newTotal.score / maxScore) * 100, 2);
             setTotal(newTotal);
+            setIsLoading(false);
         }
-    }, [pickedFlashcards, navigate]);
+    }, [pickedFlashcards, navigate, setIsLoading]);
+
+    const saveQuiz = async () => {
+        const questions = filteredFlashcards.map((card) => {
+            const {
+                time,
+                tries,
+                answers,
+                skipped,
+                userInput,
+                question: { id, question },
+            } = card;
+
+            const parsedAnswers = answers.map((answer) => {
+                const { text, isCorrect, clicked } = answer;
+                return { text, isCorrect, clicked };
+            });
+
+            return {
+                id,
+                question,
+                time,
+                tries,
+                answers: parsedAnswers,
+                skipped,
+                userInput,
+            };
+        });
+
+        await addDoc(collection(db, 'quizHistory'), {
+            owner: user.uid,
+            total,
+            questions,
+            timestamp: serverTimestamp(),
+        });
+
+        setTimeout(() => {
+            enqueueSnackbar('Zapisano pomyślnie', {
+                variant: 'success',
+                autoHideDuration: 3000,
+            });
+            navigate('/quiz-history');
+        }, 500);
+    };
     return (
         <>
             <Grid container spacing={3}>
@@ -96,46 +162,49 @@ export default function QuizEnd() {
 
                     <Typography align="center" variant="h6" color="text.secondary" gutterBottom>
                         Wynik:{' '}
-                        <Tooltip title={`${total.score} / ${pickedFlashcards.length}`}>
+                        <Tooltip title={`${total.score} / ${total.maxScore}`}>
                             <Chip
                                 label={`${total.totalPercentage}%`}
-                                color={totalColor(total.score)}
+                                color={totalColor(total.totalPercentage)}
                                 variant="outlined"
                             />
                         </Tooltip>
                     </Typography>
                 </Grid>
-                {pickedFlashcards.map((value) => (
-                    <Grid item xs={12} md={4} key={value.question.id}>
-                        <Card sx={{ minHeight: 180, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                            <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                                <Typography align="center" variant="h6" color="text.secondary" gutterBottom>
-                                    {value.question.front.kanji}
-                                </Typography>
-                                <Typography align="center" variant="h4" mb={1} component="div">
-                                    {value.question.front.kana}
-                                </Typography>
-                                <Typography align="center" color="text.secondary">
-                                    {renderRomaji(value.question.front.romaji)}
-                                </Typography>
-                                <Typography
-                                    align="center"
-                                    component="span"
-                                    color="text.secondary"
-                                    sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-                                >
-                                    Odpowiedzi
-                                    <Typography mx={1} color={questionColor(value.tries)}>
-                                        {value.tries}
-                                    </Typography>{' '}
-                                    w czasie{' '}
-                                    <Typography mx={1} color="info.main">
-                                        {dayjs.duration(value.time, 'seconds').format('mm:ss')}
-                                    </Typography>
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
+                <Grid
+                    item
+                    xs={12}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        flexDirection: 'row',
+                    }}
+                >
+                    <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+                        <InputLabel id="demo-simple-select-standard-label">Sortuj wg.</InputLabel>
+                        <Select
+                            labelId="demo-simple-select-standard-label"
+                            id="demo-simple-select-standard"
+                            value={sorting}
+                            onChange={handleChange}
+                            label="Sortowanie"
+                        >
+                            <MenuItem value="-">
+                                <em>Domyślnie</em>
+                            </MenuItem>
+                            <MenuItem value="time_asc">Czas rosnąco</MenuItem>
+                            <MenuItem value="time_desc">Czas malejąco</MenuItem>
+                            <MenuItem value="tries_asc">Prób rosnąco</MenuItem>
+                            <MenuItem value="tries_desc">Prób malejąco</MenuItem>
+                        </Select>
+                    </FormControl>
+                    <Button variant="contained" color="success" onClick={saveQuiz}>
+                        Zapisz wyniki
+                    </Button>
+                </Grid>
+                {filteredFlashcards.map((flashcard) => (
+                    <QuizAnswer data={flashcard} />
                 ))}
             </Grid>
             <Portal container={fabContainerRef.current}>
