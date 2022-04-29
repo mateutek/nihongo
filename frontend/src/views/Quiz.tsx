@@ -6,11 +6,12 @@ import Flashcard from '../services/flashcard';
 import _ from 'lodash';
 import { Answers } from '../components/Answers';
 import Timer from '../components/Timer';
-import { Fab, Portal, Tooltip, Typography, useTheme, Zoom } from '@mui/material';
+import { Card, Portal, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography, useTheme, Zoom } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useLayout } from '../data/LayoutProvider';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Box from '@mui/material/Box';
+import { Pause, PlayArrow } from '@mui/icons-material';
 
 export default function Quiz() {
     const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function Quiz() {
     const [answers, setAnswers] = useState<AnswersList>([]);
     const [cardActive, setCardActive] = useState(false);
     const [timeTaken, setTimeTaken] = useState(0);
-
+    const [paused, setPaused] = useState(false);
     const { fabContainerRef } = useLayout();
 
     const theme = useTheme();
@@ -59,6 +60,11 @@ export default function Quiz() {
         }, 500);
     }
 
+    function onSkip() {
+        setCardActive(false);
+        pickNextQuestion(true);
+    }
+
     function checkAnswer(answerIndex: number) {
         const newAnswers = _.cloneDeep(answers);
         const clickedAnswer = newAnswers[answerIndex];
@@ -76,7 +82,7 @@ export default function Quiz() {
     }
 
     function checkInputAnswer(score: number, answer: string) {
-        pickedFlashcards[currentQuestion].userInput.push(answer);
+        pickedFlashcards[currentQuestion].userInput.push({ answer, score });
         if (pickedFlashcards[currentQuestion].tries <= 3) {
             pickedFlashcards[currentQuestion].tries += 1;
         }
@@ -91,6 +97,14 @@ export default function Quiz() {
         setTimeTaken(seconds);
     }
 
+    function handleQuizClose() {
+        navigate('/quiz-select');
+    }
+
+    function handleQuizPause() {
+        setPaused(!paused);
+    }
+
     return (
         <>
             <Grid container spacing={3} justifyContent="center" alignItems="center" direction="column">
@@ -100,27 +114,44 @@ export default function Quiz() {
                             {currentQuestion + 1} / {pickedFlashcards.length}
                         </Typography>
                     </Box>
-                    <Timer isActive={cardActive} getTime={getTime} />
+                    <Timer isActive={cardActive} getTime={getTime} paused={paused} />
                 </Grid>
                 <Grid item>
-                    <FlashcardItem data={flashcardData} />
+                    {paused ? (
+                        <Card
+                            sx={{
+                                minWidth: 275,
+                                minHeight: 150,
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                        />
+                    ) : (
+                        <FlashcardItem data={flashcardData} />
+                    )}
                 </Grid>
-                {answers.length > 0 && (
-                    <Answers
-                        answersList={answers}
-                        onClick={checkAnswer}
-                        onSkip={pickNextQuestion}
-                        onInput={checkInputAnswer}
-                    />
+                {answers.length > 0 && !paused && (
+                    <Answers answersList={answers} onClick={checkAnswer} onSkip={onSkip} onInput={checkInputAnswer} />
                 )}
             </Grid>
             <Portal container={fabContainerRef.current}>
                 <Zoom in timeout={transitionDuration} unmountOnExit>
-                    <Tooltip title="Zakończ">
-                        <Fab color="error" aria-label="add" component={RouterLink} to="/quiz-select">
-                            <CloseIcon />
-                        </Fab>
-                    </Tooltip>
+                    <SpeedDial
+                        FabProps={{ color: paused ? 'info' : 'warning' }}
+                        ariaLabel=""
+                        icon={paused ? <PlayArrow /> : <Pause />}
+                        onClick={() => {
+                            handleQuizPause();
+                        }}
+                    >
+                        <SpeedDialAction
+                            key="close"
+                            icon={<CloseIcon />}
+                            tooltipTitle="Zakończ"
+                            onClick={handleQuizClose}
+                        />
+                    </SpeedDial>
                 </Zoom>
             </Portal>
         </>

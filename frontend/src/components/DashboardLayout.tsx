@@ -42,10 +42,7 @@ export const DashboardLayout: FunctionComponent<DashboardLayoutProps> = (props) 
                             <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
                                 <Outlet />
                             </Container>
-                            <Box
-                                sx={{ position: 'absolute', bottom: 0, right: 0, mr: 4, mb: 4 }}
-                                ref={fabContainerRef}
-                            />
+                            <Box sx={{ position: 'fixed', bottom: 0, right: 0, mr: 4, mb: 4 }} ref={fabContainerRef} />
                         </Box>
                     </Box>
                 </ThemeProvider>

@@ -29,8 +29,11 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
     }, [userSettings.startingQuestions]);
 
     useEffect(() => {
-        if (questions > props.maxQuestions) {
+        if (questions > props.maxQuestions && props.maxQuestions > 0) {
             setQuestions(props.maxQuestions);
+        }
+        if (questions === 0 && props.maxQuestions > 0) {
+            setQuestions(minimumQuestions);
         }
     }, [props.maxQuestions, questions]);
 
@@ -103,7 +106,7 @@ export const NumberOfQuestions: FunctionComponent<NumberOfQuestionsProps> = (pro
                 onClick={() => pickQuestions(questions)}
                 variant="contained"
                 size="small"
-                disabled={props.maxQuestions === 0}
+                disabled={props.maxQuestions === 0 || questions === 0}
             >
                 Trenuj
             </Button>

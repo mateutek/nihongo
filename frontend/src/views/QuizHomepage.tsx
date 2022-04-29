@@ -5,7 +5,7 @@ import { NumberOfQuestions } from '../components/NumberOfQuestions';
 import { useData } from '../data/DataProvider';
 
 export default function QuizHomepage() {
-    const { tags, pickTags, maxQuestions, pickAllTags } = useData();
+    const { tags, pickTags, maxQuestions, pickAllTags, deselectAllTags } = useData();
     const handleFormat = (event: React.MouseEvent<HTMLElement>, newTags: string[]) => {
         pickTags(newTags);
     };
@@ -38,6 +38,8 @@ export default function QuizHomepage() {
                         <ToggleButton value="lesson 6">Lekcja 6</ToggleButton>
                         <ToggleButton value="lesson 7">Lekcja 7</ToggleButton>
                         <ToggleButton value="lesson 8">Lekcja 8</ToggleButton>
+                        <ToggleButton value="lesson 9">Lekcja 9</ToggleButton>
+                        <ToggleButton value="lesson 10">Lekcja 10</ToggleButton>
                     </ToggleButtonGroup>
                     <Divider />
                     <Button
@@ -46,6 +48,14 @@ export default function QuizHomepage() {
                         }}
                     >
                         Zaznacz wszystkie
+                    </Button>
+                    <Button
+                        variant="contained"
+                        onClick={() => {
+                            deselectAllTags();
+                        }}
+                    >
+                        Odznacz wszystkie
                     </Button>
                 </Paper>
             </Grid>

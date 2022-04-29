@@ -11,7 +11,7 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish,tags
 10,かいしゃいん,会社員,ka.i.sha.i.n,pracownik firmy,lesson 1
 11,ぎんこういん,銀行員,gi.n.kō.i.n,pracownik banku,lesson 1
 12,いしゃ,医者,i.sha,lekarz,lesson 1
-13,けんきょしゃ,検挙者,ke.n.kyō.sha,naukowiec,lesson 1
+13,けんきゅうしゃ,研究者,ke.n.kyū.sha,badacz,lesson 1
 14,だいがく,大学,da.i.ga.ku,uniwersytet,lesson 1
 15,びょういん,病院,byō.i.n,szpital,lesson 1
 16,だれ,-,da.re,kto,lesson 1
@@ -22,29 +22,29 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish,tags
 21,ノート,-,nō.to,zeszyt,lesson 1
 22,てちょう,手帳,te.chō,organizer,lesson 1
 23,めいし,名刺,me.i.shi,wizytówka,lesson 1
-24,カート,-,kā.to,karta kredytowa,lesson 1
+24,カード,-,kā.do,karta kredytowa,lesson 1
 25,えんぴつ,鉛筆,e.n.pi.tsu,ołówek,lesson 1
 26,ボールペン,-,bō.ru.pe.n,długopis,lesson 1
-27,シャープペンシル,-,shā.pu.pe.n.shi.ru,ołówek mechaniczny,lesson 1
+27,シャープペンシル,-,shā.pu.pe.n.shi.ru,ołówek automatyczny,lesson 1
 28,かぎ,鍵,ka.gi,klucz,lesson 1
 29,とけい,時計,to.ke.i,zegarek,lesson 1
 30,かさ,傘,ka.sa,parasol,lesson 1
-31,かばん,-,ka.ba.n,torba,lesson 1
-32,テレビ,-,te.re.bi,telewizja,lesson 1
+31,かばん,鞄,ka.ba.n,torba,lesson 1
+32,テレビ,-,te.re.bi,telewizor,lesson 1
 33,ラジオ,-,ra.ji.o,radio,lesson 1
 34,カメラ,-,ka.me.ra,aparat,lesson 1
 35,コンピューター,-,ko.n.pyū.tā,komputer,lesson 1
 36,つくえ,机,tsu.ku.e,biurko,lesson 1
-37,いす,-,i.su,krzesło,lesson 1
-38,みやげ,土産,mi.ya.ge,prezent,lesson 1
-39,ここ,-,ko.ko,tutaj,lesson 2
-40,そこ,-,so.ko,tam,lesson 2
-41,あそこ,-,a.so.ko,tamto,lesson 2
+37,いす,椅子,i.su,krzesło,lesson 1
+38,おみやげ,お土産,o.mi.ya.ge,pamiątka z podróży,lesson 1
+39,ここ,-,ko.ko,tu (blisko mówiącego),lesson 2
+40,そこ,-,so.ko,tu/tam (blisko słuchacza),lesson 2
+41,あそこ,-,a.so.ko,tam (daleko od mówiącego i słuchacza),lesson 2
 42,どこ,-,do.ko,gdzie,lesson 2
-43,こちら,-,ko.chi.ra,w tą stronę,lesson 2
-44,そちら,-,so.chi.ra,tędy (blisko słuchacza),lesson 2
-45,あちら,-,a.chi.ra,tamtędy,lesson 2
-46,どちら,-,do.chi.ra,którędy,lesson 2
+43,こちら,-,ko.chi.ra,tutaj (blisko mówiącego); tędy; ja/my (w rozmowach telefonicznych); to (jest Pan/Pani),lesson 2
+44,そちら,-,so.chi.ra,tu / tam (blisko słuchacza); Ty/Wy (w rozmowach telefonicznych); ,lesson 2
+45,あちら,-,a.chi.ra,tam; tamtędy,lesson 2
+46,どちら,-,do.chi.ra,gdzie (grzeczne); którędy,lesson 2
 47,きょうしつ,教室,kyō.shi.tsu,klasa,lesson 2
 48,しょくどう,食堂,sho.ku.dō,stołówka,lesson 2
 49,じむしょ,事務所,ji.mu.sho,biuro,lesson 2
@@ -56,16 +56,16 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish,tags
 55,かいだん,階段,ka.i.da.n,schody,lesson 2
 56,エラベーター,-,e.re.bē.tā,winda,lesson 2
 57,エスカレーター,-,e.su.ka.rē.tā,schody ruchome,lesson 2
-58,じどうはんばいき,自動販売機,ji.dō.ha.n.ba.i.ki,automat,lesson 2
-59,でんわ,電話,de.n.wa,rozmowa telefoniczna,lesson 2
+58,じどうはんばいき,自動販売機,ji.dō.ha.n.ba.i.ki,automat do sprzedaży np. napojów,lesson 2
+59,でんわ,電話,de.n.wa,telefon / rozmowa telefoniczna,lesson 2
 60,くに,国,ku.ni,kraj,lesson 2
 61,かいしゃ,会社,ka.i.sha,firma,lesson 2
-62,うち,-,u.chi,dom,lesson 2
+62,うち,家,u.chi,dom,lesson 2
 63,くつ,靴,ku.tsu,buty,lesson 2
 64,ネクタイ,-,ne.ku.ta.i,krawat,lesson 2
 65,ワイン,-,wa.i.n,wino,lesson 2
-66,うりば,売り場,u.ri.ba,dział,lesson 2
-67,ちか,地下,chi.ka,piwnica,lesson 2
+66,うりば,売り場,u.ri.ba,stoisko; dział sprzedaży,lesson 2
+67,ちか,地下,chi.ka,pod ziemią; piwnica,lesson 2
 68,-かい,-階,- ka.i,n-te piętro,lesson 2
 69,なんがい,何階,na.n.ga.i,które piętro,lesson 2
 70,-えん,-円,- e.n,- yen,lesson 2
@@ -81,130 +81,213 @@ id,japanese.kana,japanese.kanji,japanese.romaji,polish,tags
 80,みます,見ます,mi.ma.su,patrzeć/ oglądać,lesson 3
 81,ききます,聞きます,ki.ki.ma.su,słuchać,lesson 3
 82,よみます,読みます,yo.mi.ma.su,czytać,lesson 3
-83,かきます,,ka.ki.ma.su,pisać,lesson 3
-84,かいます,,ka.i.ma.su,kupować,lesson 3
-85,とります,,to.ri.ma.su,robić (zdjęcie),lesson 3
-86,します,,shi.ma.su,robić/ grać,lesson 3
-87,あいます,,a.i.ma.su,spotykać,lesson 3
-88,ごはん,,go.ha.n,posiłek/ gotowany ryż,lesson 3
-89,あさごはん,,a.sa.go.ha.n,śniadanie,lesson 3
-90,ひるごはん,,hi.ru.go.ha.n,obiad/lunch,lesson 3
-91,ばんごはん,,ba.n.go.ha.n,kolacja,lesson 3
-92,パン,,pa.n,chleb,lesson 3
+83,かきます,書きます,ka.ki.ma.su,pisać,lesson 3
+84,かいます,買います,ka.i.ma.su,kupować,lesson 3
+85,とります,取ります,to.ri.ma.su,robić (zdjęcie),lesson 3
+86,します,-,shi.ma.su,robić/ grać,lesson 3
+87,あいます,会います,a.i.ma.su,spotykać,lesson 3
+88,ごはん,ご飯,go.ha.n,posiłek/ gotowany ryż,lesson 3
+89,あさごはん,朝ご飯,a.sa.go.ha.n,śniadanie,lesson 3
+90,ひるごはん,昼ご飯,hi.ru.go.ha.n,obiad/lunch,lesson 3
+91,ばんごはん,晩ご飯,ba.n.go.ha.n,kolacja,lesson 3
+92,パン,-,pa.n,chleb,lesson 3
 93,たまご,卵,ta.ma.go,jajko,lesson 3
-94,にく,,ni.ku,mięso,lesson 3
-95,さかな,,sa.ka.na,ryba,lesson 3
-96,やさい,,ya.sa.i,warzywo,lesson 3
-97,くだもの,,ku.da.mo.no,owoc,lesson 3
-98,みず,,mi.zu,woda,lesson 3
-99,おちゃ,,o.cha,zielona herbata,lesson 3
-100,こうちゃ,,kō.cha,czarna herbata,lesson 3
-101,ぎゅうにゅう,,gyu.u.nyu.u,mleko,lesson 3
-102,ジュイス,,ju.i.su,sok,lesson 3
-103,ビール,,bi.i.ru,piwo,lesson 3
-104,おさけ,,o.sa.ke,alkohol,lesson 3
-105,たばこ,,ta.ba.ko,papierosy,lesson 3
-106,てがみ,,te.ga.mi,list,lesson 3
-107,レポート,,re.po.to,raport,lesson 4
-108,しゃしん,,sha.shi.n,fotografia,lesson 4
+94,にく,肉,ni.ku,mięso,lesson 3
+95,さかな,魚,sa.ka.na,ryba,lesson 3
+96,やさい,野菜,ya.sa.i,warzywo,lesson 3
+97,くだもの,果物,ku.da.mo.no,owoc,lesson 3
+98,みず,水,mi.zu,woda,lesson 3
+99,おちゃ,お茶,o.cha,zielona herbata,lesson 3
+100,こうちゃ,紅茶,kō.cha,czarna herbata,lesson 3
+101,ぎゅうにゅう,牛乳,gyu.u.nyu.u,mleko,lesson 3
+102,ジュース,-,jū.su,sok,lesson 3
+103,ビール,-,bi.i.ru,piwo,lesson 3
+104,おさけ,お酒,o.sa.ke,alkohol,lesson 3
+105,たばこ,-,ta.ba.ko,papierosy,lesson 3
+106,てがみ,手紙,te.ga.mi,list,lesson 3
+107,レポート,-,re.po.to,raport,lesson 4
+108,しゃしん,写真,sha.shi.n,fotografia,lesson 4
 109,ビデオ,,bi.de.o,video,lesson 4
-110,みせ,,mi.se,sklep,lesson 4
-111,にわ,,ni.wa,ogród,lesson 4
-112,しゃくだい,,sha.ku.da.i,praca domowa,lesson 4
-113,レニス,,te.ni.su,tenis,lesson 4
+110,みせ,店,mi.se,sklep,lesson 4
+111,にわ,庭,ni.wa,ogród,lesson 4
+112,しゅくだい,,shu.ku.da.i,praca domowa,lesson 4
+113,テニス,,te.ni.su,tenis,lesson 4
 114,サッカー,,sa.kkā,piłka nożna,lesson 4
-115,おはなみ,,o.ha.na.mi,oglądanie wiśni,lesson 4
-116,なに,,na.ni,co,lesson 4
-117,いっしょに,,i.ssho.ni,razem,lesson 4
+115,おはなみ,お花見,o.ha.na.mi,oglądanie wiśni,lesson 4
+116,なに,何,na.ni,co,lesson 4
+117,いっしょに,一緒に,i.s.sho.ni,razem,lesson 4
 118,ちょっと,,cho.tto,trochę,lesson 4
 119,いつも,,i.tsu.mo,zawsze / zazwyczaj,lesson 4
-120,ときどき,,to.ki.do.ki,czasem,lesson 4
+120,ときどき,時々,to.ki.do.ki,czasem,lesson 4
 121,それから,,so.re.ka.ra,później,lesson 4
 122,いいですね,,i.i.de.su.ne,To dobrze,lesson 4
-123,わかりました,,wa.ka.ri.ma.shi.ta,Rozumiem,lesson 4
-124,なんですか,,na.n.de.su.ka,Tak?,lesson 4
-125,じゃ,,ja,Do zobaczenia jutro,lesson 4
+123,わかりました,分かりました,wa.ka.ri.ma.shi.ta,Rozumiem,lesson 4
+124,なんですか,何ですか,na.n.de.su.ka,Tak?,lesson 4
+125,じゃ,,ja,no to / więc,lesson 4
 126,ハンサム,,ha.n.sa.mu,przystojny,lesson 8
 127,きれい,綺麗,ki.re.i,piękny / czysty,lesson 8
 128,しずか,静か,shi.zu.ka,cichy,lesson 8
-129,にぎじゃか,賑やか,ni.gi.ja.ka,pełen życia/ gwarny,lesson 8
+129,にぎやか,賑やか,ni.gi.ya.ka,pełen życia/ gwarny,lesson 8
 130,しんせつ,親切,shi.n.se.tsu,pomocny / uprzejmy,lesson 8
 131,ひま,暇,hi.ma,wolny (czas),lesson 8
 132,げんき,元気,ge.n.ki,zdrowy / energiczny,lesson 8
-133,べんり,便利,be.n.ri,wygodny,lesson 8
-134,すてき,素敵,su.te.ki,fajnie / miło,lesson 8
-135,おおき,大き,o.o.ki,duży,lesson 8
+133,べんり,便利,be.n.ri,wygodny / korzystny,lesson 8
+134,すてき,素敵,su.te.ki,wspaniały / super / świetny / niesamowity,lesson 8
+135,おおきい,大きい,o.o.kii,duży,lesson 8
 136,ちいさい,小さい,chi.i.sa.i,mały,lesson 8
-137,あたらしい,新しい,a.ta.ra.shi.i,nowy/ świeży,lesson 8
+137,あたらしい,新しい,a.ta.ra.shi.i,nowy / świeży,lesson 8
 138,ふるい,古い,fu.ru.i,stary (obiekt),lesson 8
 139,いい(よい),良い,i.i,dobry,lesson 8
 140,わるい,悪い,wa.ru.i,zły,lesson 8
 141,あつい,暑い,a.tsu.i,gorący,lesson 8
-142,さむい,寒い,sa.mu.i,zimny (temperatura),lesson 8
-142,つめたい,冷たい,tsu.me.ta.i.,zimy (dotyk),lesson 8
+142,さむい,寒い,sa.mu.i,zimny (pogoda),lesson 8
+142,つめたい,冷たい,tsu.me.ta.i.,zimny / chłodny (także o ludziach),lesson 8
 143,むずかしい,難しい,mu.zu.ka.shi.i,trudny,lesson 8
-144,やさしい,易しい,ya.sa.shi.i,łatwy,lesson 8
-145,たかい,高い,ta.ka.i,drogi/ wysoki,lesson 8
-146,やすい,安い,ja.sa.i,tani,lesson 8
+144,やさしい,易しい,ya.sa.shi.i,łatwy / miły,lesson 8
+145,たかい,高い,ta.ka.i,drogi / wysoki,lesson 8
+146,やすい,安い,ya.su.i,tani,lesson 8
 147,おもしろい,面白い,o.mo.shi.ro.i,interesujący,lesson 8
 148,おいしい,美味しい,o.i.shi.i,smaczny,lesson 8
-149,いそがしい,忙しい,i.zu.ga.shi.i,zajęty,lesson 8
-150,たのしい,楽しい,ta.no.shi.i,przyjemny,lesson 8
+149,いそがしい,忙しい,i.so.ga.shi.i,zajęty,lesson 8
+150,たのしい,楽しい,ta.no.shi.i,przyjemny / fajny,lesson 8
 151,しろい,白い,shi.ro.i,biały,lesson 8
 152,くろい,黒い,ku.ro.i,czarny,lesson 8
-153,あかい,赤い,a.ka.i,red,lesson 8
+153,あかい,赤い,a.ka.i,czerwony,lesson 8
 154,あおい,青い,a.o.i,niebieski,lesson 8
-155,さくら,桜,sa.ku.ra,kwiat wiśni,lesson 8
+155,さくら,桜,sa.ku.ra,wiśnia japońska,lesson 8
 156,やま,山,ya.ma,góra,lesson 8
 157,まち,町,ma.chi,małe miasto,lesson 8
 158,たべもの,食べ物,ta.be.mo.no,jedzenie,lesson 8
 159,ところ,所,to.ko.ro,miejsce,lesson 8
-160,りょう,寮,ri.yo.o,hostel/ akademik,lesson 8
+160,りょう,寮,ryō,akademik,lesson 8
 161,レストラン,,re.su.to.ran,restauracja,lesson 8
-162,せいかつ,生活,sei.ka.tsu,życie,lesson 8
-163,[お]しごと,[お]仕事,shi.go.to,praca/ biznes,lesson 8
-164,どう,如何,do.o,jak?,lesson 8
+162,せいかつ,生活,sei.ka.tsu,życie (codzienne),lesson 8
+163,[お]しごと,[お]仕事,shi.go.to,praca,lesson 8
+164,どう,,dō,jak?,lesson 8
 165,どんな~,,do.n.na,jakiego rodzaju?,lesson 8
 166,とても,迚も,to.te.mo,bardzo,lesson 8
-167,あまり,余り,a.ma.ri,bynajmniej,lesson 8
-168,そして,而して,so.shi.te,i (do łączenia zdań),lesson 8
+167,あまり,余り,a.ma.ri,niezbyt (z przeczeniem),lesson 8
+168,そして,而して,so.shi.te,i / potem (do łączenia zdań),lesson 8
 169,きります,着ます,ki.ri.ma.su,ciąć,lesson 7
 170,おくります,送ります,o.ku.ri.ma.su,wysłać,lesson 7
-171,あげます,上げます,a.ge.ma.su,dawdać,lesson 7
+171,あげます,上げます,a.ge.ma.su,dawać,lesson 7
 172,もらいます,貰います,mo.ra.i.ma.su,otrzymać,lesson 7
 173,かします,貸します,ka.shi.ma.su,pożyczyc komuś,lesson 7
 174,かります,借ります,ka.ri.ma.su,pożyczyć od kogoś,lesson 7
 175,おしえます,教えます,o.shi.e.ma.su,nauczać (kogoś),lesson 7
 176,ならいます,習います,na.ra.i.ma.su,uczyć się,lesson 7
-177,かけます,掛けます,ka.ke.ma.su,wykonać telefon (rozmowę),lesson 7
+177,でんわをかけます,電話をかけます,de.n.wa. o. ka.ke.ma.su,dzwonić ,lesson 7
 178,て,手,te,ręka,lesson 7
 179,はし,箸,ha.shi,pałeczki drewniane do jedzenia,lesson 7
-180,スプーン,,su.pu.n,łyżka,lesson 7
+180,スプーン,,s.pu.n,łyżka,lesson 7
 181,ナイフ,,na.i.fu,nóż,lesson 7
 182,フォーク,,fō.ku,widelec,lesson 7
 183,はさみ,鋏,ha.sa.mi,nożyczki,lesson 7
-184,パソコン,,po.so.ko.n,komputer,lesson 7
-185,パンチ,,pa.n.chi,"dziurkacz,uderzenie",lesson 7
-186,ホッチキス,,ho.ch.chi.ki.su,zszywacz,lesson 7
-187,セロハンテープ,,se.ro.ha.n.ta.pu,tasma klejaca,lesson 7
+184,パソコン,,pa.so.ko.n,komputer / laptop,lesson 7
+185,パンチ,,pa.n.chi,dziurkacz / uderzenie,lesson 7
+186,ホッチキス,,ho.cchi.ki.su,zszywacz,lesson 7
+187,セロハンテープ,,se.ro.ha.n.tē.pu,tasma klejaca,lesson 7
 188,けしゴム,消しゴム,ke.shi.go.mu,gumka do mazania,lesson 7
 189,かみ,紙,ka.mi,papier,lesson 7
 190,はな,花,ha.na,kwiat,lesson 7
-191,シャツ,,shi.ya.tsu,koszula,lesson 7
+191,シャツ,,sha.tsu,koszula,lesson 7
 192,プレゼント,,pu.re.ze.n.to,prezent,lesson 7
 193,にもつ,荷物,ni.mo.tsu,bagaż,lesson 7
 194,おかね,お金,o.ka.ne,pieniądze,lesson 7
 195,きっぷ,切符,ki.p.pu,bilet,lesson 7
 196,クリスマス,,ku.ri.su.ma.su,św. bożego narodzenia,lesson 7
-197,おとっさん,お父さん,o.to.s.sa.n,ojciec (czyjś),lesson 7
-198,おかあさん,お母さん,o.ka.a.sa.n,matka (czyjaś),lesson 7
-199,あに,兄,o.ni,starszy brat (mój),lesson 7
-200,おとうと,弟,o.to.o.to,młodszy brat (mój),lesson 7
-201,あね,姉,o.ne,starsza siostra (moja),lesson 7
-202,いもうと,妹,i.mo.o.to,młodsza siostra (moja),lesson 7
+197,おとうさん,お父さん,o.tō.sa.n,ojciec (czyjś),lesson 7
+198,おかあさん,お母さん,o.kā.sa.n,matka (czyjaś),lesson 7
+199,あに,兄,a.ni,starszy brat (mój),lesson 7
+200,おとうと,弟,o.tō.to,młodszy brat (mój),lesson 7
+201,あね,姉,a.ne,starsza siostra (moja),lesson 7
+202,いもうと,妹,i.mō.to,młodsza siostra (moja),lesson 7
 203,むすめ,娘,mu.su.me,córka,lesson 7
 204,むすこ,息子,mu.su.ko,syn,lesson 7
-205,こども,子供,ko.do.mo,dzieci,lesson 7
-206,もう,,mo.o,już,lesson 7
-207,まだ,,ma.da,jeszcze nie,lesson 7
-208,それから,,so.re.ka.ra,wkrótce,lesson 7
+205,こども,子供,ko.do.mo,dziecko / dzieci,lesson 7
+206,もう,,mō,już,lesson 7
+207,まだ,,ma.da,jeszcze nie (z przeczeniem),lesson 7
+208,それから,,so.re.ka.ra,później / następnie,lesson 7
+209,わかります,,wa.ka.ri.ma.su,rozumieć,lesson 9
+210,あります,,a.ri.ma.su,mieć,lesson 9
+211,すき[な],好き,su.ki,lubić,lesson 9
+212,きらい,嫌い,ki.ra.i,nie lubić,lesson 9
+213,じょうず[な],上手,ji.jo.o.zu,być dobrym w czymś,lesson 9
+214,へた,下手,he.ta,być nieudolnym w czymś,lesson 9
+215,りょうり,料理,ri.yo.o.ri,gotować,lesson 9
+216,のみもの,飲み物,no.mi.mo.no,napoje,lesson 9
+217,スポーツ,,su.po.tsu,sport,lesson 9
+218,やきゅう,,ya.ki.yu,baseball,lesson 9
+219,ダンス,,da.n.su,taniec,lesson 9
+220,おんがく,音楽,o.n.ga.ku,muzyka,lesson 9
+221,うた,歌,u.ta,pieśń,lesson 9
+222,ジャズ,,ji.ya.zu,jazz,lesson 9
+223,コンサート,,ko.n.se.to,koncert,lesson 9
+224,かぶき,歌舞伎,ka.bu.ki,kabuki,lesson 9
+225,え,絵,e,obraz / rysunek,lesson 9
+226,じ,字,ji,litera / tekst,lesson 9
+227,かんじ,漢字,ka.n.ji,znaki chińskie,lesson 9
+228,ひらがな,平仮名,hi.ra.ga.na,hiragana,lesson 9
+229,かたかな,片仮名,ka.ta.ka.na,katakana,lesson 9
+230,ローマじ,ローマ字,ro.ma.ji,romaji ,lesson 9
+231,こまかい おかね,,ko.ma.ka.i o.ka.ne,drobne pieniądze,lesson 9
+232,チケット,,te.ke.t.to,bilet,lesson 9
+233,じかん,時間,ji.ka.n,czas,lesson 9
+234,ようじ,用事,yo.o.ji,zadanie / zlecenie ,lesson 9
+235,やくそく,約束,ya.ku.so.ku,spotkanie / obietnica,lesson 9
+236,ごしゅじん,御主人,go.shi.ju.ji.n,czyjś mąż,lesson 9
+237,おっと / しゅじん,夫 / 主人,o.t.to/shi.yu.jin,mój mąż,lesson 9
+238,おくさん,奥さん,o.ku.san,czyjaś żona,lesson 9
+239,つま / かない,家内,ka.na.i,moja żona,lesson 9
+240,こども,子供,ko.do.mo,dziecko,lesson 9
+241,よく,,yo.ku,dobrze / umiejętnie,lesson 9
+242,だいたい,大体,da.i.ta.i,przeważnie,lesson 9
+243,たくさん,沢山,ta.ku.san,dużo / wiele,lesson 9
+244,すこし,少し,su.ko.shi,nie dużo / mało,lesson 9
+245,ぜんぜん,全然,zen.zen,ani trochę,lesson 9
+246,はやく,早く,ha.ya.ku,wcześnie / wkrótce / szybcy,lesson 9
+247,~から,,ka.ra,~ponieważ,lesson 9
+248,どうして,,do.o.shi.te,dlaczego,lesson 9
+249,ざんねん,残念,za.n.ne.n,niestety / niefortunnie,lesson 9
+250,すみません,済みません,su.mi.ma.se.n,przepraszam,lesson 9
+251,もしもし,,mo.shi.mo.shi.,hallo!,lesson 9
+252,います,,i.ma.su,być (żywe),lesson 10
+253,あります,,a.ri.ma.su,być (nieożywione),lesson 10
+254,いろいろ,,i.ro.iro,rożne / różnorodne,lesson 10
+255,おとこのひと,男の人,o.to.ko.no.hi.to,mężczyzna,lesson 10
+256,おんなのひと,女の人,o.n.na.no.hi.to,kobieta,lesson 10
+257,おとこのこ,男の子,o.to.ko.no.ko,chłopiec,lesson 10
+258,おんなのこ,女の子,o.n.na.no.ko,dziewczynka,lesson 10
+259,いぬ,犬,i.nu,pies,lesson 10
+260,ねこ,猫,ne.ko,kot,lesson 10
+261,き,木,ki,drzewo,lesson 10
+262,もの,物,mo.no,rzecz,lesson 10
+263,フィルム,,fu.i.ru.mu,film,lesson 10
+264,れいぞうこ,冷蔵庫,re.i.zo.o.ko,lodówka,lesson 10
+265,でんち,電池,de.n.chi,bateria,lesson 10
+266,はこ,箱,ha.ko,pudło,lesson 10
+267,スイッチ,,su.i.ch.chi,switch,lesson 10
+268,テーブル,,te.bu.ru,stół,lesson 10
+269,ベッド,,be.d.do,łóżko,lesson 10
+270,たな,棚,ta.na,półka,lesson 10
+271,ドア,,do.a,drzwi (styl zachodni),lesson 10
+272,もど,窓,mo.do,okno,lesson 10
+273,ポスト,,po.su.to,skrzynka pocztowa,lesson 10
+274,ビル,,bi.ru,biurowiec,lesson 10
+275,こうえん,公園,ko.o.e.n,park,lesson 10
+276,きっさてん,喫茶店,ki.s.sa.te.n,kawiarnia,lesson 10
+277,ほんや,本屋,ho.n.ya,księgarnia,lesson 10
+278,~や,,~や,~sklep,lesson 10
+279,のりば,乗り場,no.ri.ba,"przystanek (bus, taxi etc)",lesson 10
+280,けん,県,ke.n,prefektura,lesson 10
+281,うえ,上,u.e,na / ponad (czymś),lesson 10
+282,した,下,shi.ta,pod / poniżej,lesson 10
+283,まえ,前,ma.e,z frontu / z przodu,lesson 10
+284,うしろ,後ろ,u.shi.ro,z tyłu / za czymś,lesson 10
+285,みぎ,右,mi.gi,prawa strona,lesson 10
+286,ひだり,左,hi.da.ri,lewa strona,lesson 10
+287,なか,中,na.ka,w środku,lesson 10
+288,そと,外,so.to,na zewnątrz,lesson 10
+289,となり,隣,to.na.ri,następny (w rzędzie),lesson 10
+290,ちかく,近く,chi.ka.ku,w pobliżu,lesson 10
+291,あいだ,間,a.i.da,pomiędzy,lesson 10

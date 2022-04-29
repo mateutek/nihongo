@@ -57,10 +57,10 @@ export const QuizHistoryAnswer: FunctionComponent<QuizAnswerProps> = (props) => 
                             </Typography>
                             <Grid container spacing={2}>
                                 {data.userInput.length > 0
-                                    ? data.userInput.map((answer, index) => (
+                                    ? data.userInput.map((input, index) => (
                                           <Grid item key={index}>
                                               <Typography>
-                                                  {index + 1}. {answer}
+                                                  {index + 1}. {input.answer} ({input.score})
                                               </Typography>
                                           </Grid>
                                       ))

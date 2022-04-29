@@ -1,31 +1,45 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import dayjs from 'dayjs';
 
 type FlashcardProps = {
     isActive: boolean;
+    paused: boolean;
     getTime: (seconds: number) => void;
 };
 
 const Timer: FunctionComponent<FlashcardProps> = (props) => {
+    const interval = useRef<undefined | number>(undefined);
     const [seconds, setSeconds] = useState(0);
-    const { isActive, getTime } = props;
+    const { isActive, getTime, paused } = props;
+
+    function setInterval() {
+        clearInterval(interval.current);
+        interval.current = window.setInterval(() => {
+            setSeconds((seconds) => seconds + 1);
+            getTime(seconds + 1);
+        }, 1000);
+    }
 
     useEffect(() => {
-        let interval: number | undefined = undefined;
         if (isActive) {
-            interval = window.setInterval(() => {
-                setSeconds((seconds) => seconds + 1);
-                getTime(seconds + 1);
-            }, 1000);
-        } else if (!isActive && seconds !== 0 && interval) {
-            clearInterval(interval);
+            setInterval();
+        } else if (!isActive && seconds !== 0 && interval.current) {
+            clearInterval(interval.current);
         }
 
         if (!isActive && seconds !== 0) {
             setSeconds(0);
         }
-        return () => clearInterval(interval);
+        return () => clearInterval(interval.current);
     }, [isActive, seconds, getTime]);
+
+    useEffect(() => {
+        if (paused) {
+            clearInterval(interval.current);
+        } else {
+            setInterval();
+        }
+    }, [paused]);
 
     return (
         <div className="app">

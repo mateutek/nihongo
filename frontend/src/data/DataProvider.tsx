@@ -23,7 +23,10 @@ export type RandomData = {
     tries: number;
     time: number;
     skipped: boolean;
-    userInput: string[];
+    userInput: {
+        score: number;
+        answer: string;
+    }[];
 };
 
 interface DataContextType {
@@ -33,6 +36,7 @@ interface DataContextType {
     tags: string[];
     pickTags: (newTags: string[]) => void;
     pickAllTags: () => void;
+    deselectAllTags: () => void;
     maxQuestions: number;
 }
 
@@ -187,7 +191,21 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
         }
     }
 
-    let value = { flashcards, loadingData, pickQuestions, pickedFlashcards, tags, pickTags, maxQuestions, pickAllTags };
+    function deselectAllTags() {
+        setTags([]);
+    }
+
+    let value = {
+        flashcards,
+        loadingData,
+        pickQuestions,
+        pickedFlashcards,
+        tags,
+        pickTags,
+        maxQuestions,
+        pickAllTags,
+        deselectAllTags,
+    };
 
     return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
 }

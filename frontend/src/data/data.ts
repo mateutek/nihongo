@@ -19,7 +19,10 @@ export type QuizHistoryItem = {
     time: number;
     score: number;
     skipped: boolean;
-    userInput: string[];
+    userInput: {
+        answer: string;
+        score: number;
+    }[];
     answers: {
         text: string;
         isCorrect: boolean;
