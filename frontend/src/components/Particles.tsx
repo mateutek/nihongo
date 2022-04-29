@@ -17,7 +17,7 @@ export const Particles: FunctionComponent<ParticlesProps> = (props) => {
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs value={value} onChange={handleChange} variant="fullWidth">
                     {particles.map((particle, index) => (
-                        <Tab label={particle} id={`particle-tab-${index}`} />
+                        <Tab key={`particle-tab-${index}`} label={particle} id={`particle-tab-${index}`} />
                     ))}
                 </Tabs>
             </Box>

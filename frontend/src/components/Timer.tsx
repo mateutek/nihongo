@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useRef, useState } from 'react';
 import dayjs from 'dayjs';
 
 type FlashcardProps = {
@@ -12,13 +12,13 @@ const Timer: FunctionComponent<FlashcardProps> = (props) => {
     const [seconds, setSeconds] = useState(0);
     const { isActive, getTime, paused } = props;
 
-    function setInterval() {
+    const setInterval = useCallback(() => {
         clearInterval(interval.current);
         interval.current = window.setInterval(() => {
             setSeconds((seconds) => seconds + 1);
             getTime(seconds + 1);
         }, 1000);
-    }
+    }, [getTime, seconds]);
 
     useEffect(() => {
         if (isActive) {
@@ -31,7 +31,7 @@ const Timer: FunctionComponent<FlashcardProps> = (props) => {
             setSeconds(0);
         }
         return () => clearInterval(interval.current);
-    }, [isActive, seconds, getTime]);
+    }, [isActive, seconds, getTime, setInterval]);
 
     useEffect(() => {
         if (paused) {
@@ -39,7 +39,7 @@ const Timer: FunctionComponent<FlashcardProps> = (props) => {
         } else {
             setInterval();
         }
-    }, [paused]);
+    }, [paused, setInterval]);
 
     return (
         <div className="app">

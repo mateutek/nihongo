@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -20,11 +20,7 @@ function TabPanel(props: TabPanelProps) {
             aria-labelledby={`simple-tab-${index}`}
             sx={{ ...(fullWidth ? { width: '100%' } : {}) }}
         >
-            {value === index && (
-                <Box sx={{ px: hasPadding ? 3 : 0 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
+            {value === index && <Box sx={{ px: hasPadding ? 3 : 0 }}>{children}</Box>}
         </Box>
     );
 }

@@ -29,7 +29,7 @@ export default function Grammar() {
                     sx={{ borderRight: 1, borderColor: 'divider' }}
                 >
                     {grammarTopics.map((grammar, index) => (
-                        <Tab label={grammar} id={`grammar-${index}`} />
+                        <Tab key={`grammar-${index}`} label={grammar} id={`grammar-${index}`} />
                     ))}
                 </Tabs>
                 <TabPanel value={value} index={0} fullWidth={true} hasPadding={false}>

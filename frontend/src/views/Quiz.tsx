@@ -6,7 +6,7 @@ import Flashcard from '../services/flashcard';
 import _ from 'lodash';
 import { Answers } from '../components/Answers';
 import Timer from '../components/Timer';
-import { Card, Portal, SpeedDial, SpeedDialAction, SpeedDialIcon, Typography, useTheme, Zoom } from '@mui/material';
+import { Card, Portal, SpeedDial, SpeedDialAction, Typography, useTheme, Zoom } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import { useLayout } from '../data/LayoutProvider';
 import { useNavigate } from 'react-router-dom';
